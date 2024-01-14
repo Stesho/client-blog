@@ -1,0 +1,24 @@
+@import '@/styles/colors.scss';
+
+.button {
+  padding: 16px 48px;
+  font-family: var(--font-sen);
+  background-color: $yellow-100;
+  color: $black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $yellow-200;
+  }
+}
+
+.secondary {
+  background-color: $white;
+
+  &:hover {
+    background-color: $grey-300;
+  }
+}

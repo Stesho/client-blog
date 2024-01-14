@@ -1,0 +1,25 @@
+@import '@/styles/colors.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 80px;
+  background-color: $black;
+  color: $white;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  margin: 0 8px 0 0;
+}
+
+.link {
+  margin: 0 24px 0 0;
+}

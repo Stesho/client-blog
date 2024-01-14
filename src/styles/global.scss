@@ -1,0 +1,77 @@
+@import './colors';
+
+%heading {
+  color: $black;
+  font-family: var(--font-sen);
+  font-weight: 700;
+}
+
+%body {
+  font-family: var(--font-inter);
+  font-weight: 400;
+}
+
+.display {
+  @extend %heading;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -2px;
+}
+
+.heading1 {
+  @extend %heading;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -2px;
+}
+
+.heading2 {
+  @extend %heading;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+
+.heading3 {
+  @extend %heading;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+
+.heading4 {
+  @extend %heading;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.heading5 {
+  @extend %heading;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.heading6 {
+  @extend %heading;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.body1 {
+  @extend %body;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.body2 {
+  @extend %body;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.label {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
