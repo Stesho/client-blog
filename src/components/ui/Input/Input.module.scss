@@ -1,0 +1,25 @@
+@import '@/styles/colors.scss';
+
+.input {
+  padding: 14px 25px;
+  background: none;
+  line-height: 26px;
+}
+
+.primary {
+  color: $black;
+  border: 1px solid rgba(109, 110, 118, 0.5);
+
+  &::placeholder {
+    color: $grey-500;
+  }
+}
+
+.secondary {
+  color: $white;
+  border: 1px solid $grey-500;
+
+  &::placeholder {
+    color: $grey-400;
+  }
+}
