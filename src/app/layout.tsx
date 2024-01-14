@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Inter, Sen } from 'next/font/google';
 import '@/styles/reset.scss';
+import '@/styles/global.scss';
 
 const sen = Sen({ subsets: ['latin'], weight: ['400', '500', '700'] });
 const inter = Inter({ subsets: ['latin'] });

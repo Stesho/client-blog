@@ -12,11 +12,7 @@
 }
 
 .caption {
-  color: $grey-400;
-  font-family: var(--font-inter);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
+  color: $grey-500;
 }
 
 .author {
@@ -25,16 +21,8 @@
 
 .title {
   margin: 16px 0;
-  font-family: var(--font-sen);
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -1px;
 }
 
 .text {
   color: rgba($black, 0.7);
-  font-family: var(--font-inter);
-  font-size: 16px;
-  line-height: 28px;
 }

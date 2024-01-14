@@ -17,12 +17,12 @@ export const BlogPostCard = ({
   title,
   text,
 }: BlogPostCardProps) => (
-    <div className={styles.blogPostCard}>
-      <Image className={styles.image} src={imageURL} alt={alt} />
-      <div className={styles.content}>
-        <span className={styles.type}>{type}</span>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.text}>{text}</p>
-      </div>
+  <div className={styles.blogPostCard}>
+    <Image className={styles.image} src={imageURL} alt={alt} />
+    <div className={styles.content}>
+      <span className={styles.type}>{type}</span>
+      <h3 className={`${styles.title} heading2`}>{title}</h3>
+      <p className={`${styles.text} body1`}>{text}</p>
     </div>
-  );
+  </div>
+);
