@@ -6,6 +6,7 @@ import { OurMission } from '@/components/ui/OurMission/OurMission';
 import { Categories } from '@/components/ui/Categories/Categories';
 import { WhyWeStarted } from '@/components/ui/WhyWeStarted/WhyWeStarted';
 import { AuthorsList } from '@/components/ui/AuthorsList/AuthorsList';
+import { FeaturedIn } from '@/components/ui/FeaturedIn/FeaturedIn';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Categories />
       <WhyWeStarted />
       <AuthorsList />
+      <FeaturedIn />
     </main>
   );
 }

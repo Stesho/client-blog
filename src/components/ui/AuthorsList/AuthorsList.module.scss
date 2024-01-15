@@ -1,7 +1,6 @@
 .title {
   margin: 0 0 48px 0;
   text-align: center;
-  font-family: var(--font-sen);
 }
 
 .list {
@@ -11,4 +10,5 @@
 
 .listItem {
   flex: 1;
+  max-width: 296px;
 }

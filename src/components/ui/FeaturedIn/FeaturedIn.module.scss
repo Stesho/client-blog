@@ -1,0 +1,23 @@
+@import '@/styles/colors.scss';
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+}
+
+.logoItem {
+  margin: 0 0 0 74px;
+}
+
+.caption {
+  color: rgba($grey-400, 0.6);
+}
+
+.title {
+  color: $grey-400;
+}
