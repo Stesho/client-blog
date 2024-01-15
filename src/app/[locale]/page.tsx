@@ -2,6 +2,7 @@ import React from 'react';
 import { HomeInfo } from '@/components/ui/HomeInfo/HomeInfo';
 import PostImg from '@/assets/img/posts/white-concrete-building.png';
 import { HomePosts } from '@/components/ui/HomePosts/HomePosts';
+import { OurMission } from '@/components/ui/OurMission/OurMission';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         text='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.'
         date='May 23, 2022'
       />
+      <OurMission />
     </main>
   );
 }

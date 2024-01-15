@@ -12,6 +12,17 @@
     "allPosts": {
       "title": "All posts",
       "button": "View all"
+    },
+    "about": {
+      "caption": "About us",
+      "title": "We are a community of content writers who share their learnings",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "button": "Read more >"
+    },
+    "mission": {
+      "caption": "Our mission",
+      "title": "Creating valuable content for creatives all around the world",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   },
   "footer": {
