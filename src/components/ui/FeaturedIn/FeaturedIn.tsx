@@ -10,17 +10,17 @@ import styles from './FeaturedIn.module.scss';
 const logos = [Logo1, Logo2, Logo3, Logo4, Logo5];
 
 export const FeaturedIn = () => (
-    <section className={`${styles.section} section container`}>
-      <div>
-        <span className={`${styles.caption} body2`}>We are</span>
-        <h4 className={`${styles.title} heading4`}>Featured in</h4>
-      </div>
-      <ul className={styles.list}>
-        {logos.map((logoSrc, index) => (
-          <li className={styles.logoItem}>
-            <Image src={logoSrc} alt={`logo${index}`} />
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
+  <section className={`${styles.section} container`}>
+    <div>
+      <span className={`${styles.caption} body2`}>We are</span>
+      <h4 className={`${styles.title} heading4`}>Featured in</h4>
+    </div>
+    <ul className={styles.list}>
+      {logos.map((logoSrc, index) => (
+        <li className={styles.logoItem}>
+          <Image src={logoSrc} alt={`logo${index}`} />
+        </li>
+      ))}
+    </ul>
+  </section>
+);

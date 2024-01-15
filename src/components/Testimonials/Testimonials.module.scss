@@ -1,0 +1,55 @@
+@import '@/styles/colors.scss';
+
+.wrapper {
+  display: flex;
+  padding: 80px 112px;
+  background-color: $grey-100;
+}
+
+.text {
+  padding: 0 84px 0 0;
+  border-right: 1px solid rgba($grey-400, 0.4);
+}
+
+.testimonial {
+  padding: 0 0 0 96px;
+}
+
+.author {
+  display: flex;
+}
+
+.info {
+  span {
+    display: block;
+  }
+}
+
+.carousel {
+  position: relative;
+}
+
+.controllers {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%, -100%);
+
+  button {
+    width: 30px;
+    height: 30px;
+    background-color: $black;
+    border-radius: 50%;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $grey-400;
+    }
+
+    &:disabled {
+      background-color: $grey-300;
+    }
+  }
+}
