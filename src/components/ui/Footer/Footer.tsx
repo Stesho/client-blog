@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button/Button';
 import { Input } from '@/components/ui/Input/Input';
 import { FOOTER_LINKS } from '@/constants/footer';
-import { useTranslations } from 'next-intl';
 import styles from './Footer.module.scss';
 
 export const Footer = () => {

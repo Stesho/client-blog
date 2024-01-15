@@ -8,6 +8,12 @@
     },
     "button": "Video about us"
   },
+  "home": {
+    "allPosts": {
+      "title": "All posts",
+      "button": "View all"
+    }
+  },
   "footer": {
     "text": "Subscribe to our news letter to get latest updates and news",
     "nav": {
