@@ -1,6 +1,4 @@
 import React from 'react';
-import { Header } from '@/components/ui/Header/Header';
-import { Footer } from '@/components/ui/Footer/Footer';
 import { BlogPostCard } from '@/components/ui/BlogPostCard/BlogPostCard';
 import { CategoryCard } from '@/components/ui/CategoryCard/CategoryCard';
 import { AuthorCard } from '@/components/ui/AuthorCard/AuthorCard';
@@ -10,11 +8,12 @@ import AuthorImage from '@/assets/img/author/man-in-yellow.png';
 import { BlogCard } from '@/components/ui/BlogCard/BlogCard';
 import { CategoryButton } from '@/components/ui/CategoryButton/CategoryButton';
 import { Input } from '@/components/ui/Input/Input';
+import { HomeInfo } from '@/components/ui/HomeInfo/HomeInfo';
 
 export default function Home() {
   return (
     <main>
-      <Header />
+      <HomeInfo />
       <BlogPostCard
         imageURL={BlogImage}
         alt='two women in front of board'
@@ -50,7 +49,6 @@ export default function Home() {
         caption='Business'
       />
       <Input placeholder='Email' />
-      <Footer />
     </main>
   );
 }

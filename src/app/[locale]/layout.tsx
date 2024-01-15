@@ -4,6 +4,8 @@ import { Inter, Sen } from 'next/font/google';
 import { PageParams } from '@/types/pageParams';
 import '@/styles/reset.scss';
 import '@/styles/global.scss';
+import { Header } from '@/components/ui/Header/Header';
+import { Footer } from '@/components/ui/Footer/Footer';
 
 const sen = Sen({ subsets: ['latin'], weight: ['400', '500', '700'] });
 const inter = Inter({ subsets: ['latin'] });
@@ -26,7 +28,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.locale}>
-      <body className={`${inter.className} ${sen.className}`}>{children}</body>
+      <body className={`${inter.className} ${sen.className}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
