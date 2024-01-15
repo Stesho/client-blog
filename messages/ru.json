@@ -29,6 +29,12 @@
     },
     "categories": {
       "title": "Выберите категорию"
+    },
+    "whyWeStarted": {
+      "caption": "Почему мы начали",
+      "title": "Все началось с простой идеи и превратилось в нашу страсть.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+      "button": "Узнайте нашу историю >"
     }
   },
   "footer": {

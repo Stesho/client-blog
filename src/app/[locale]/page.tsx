@@ -4,6 +4,7 @@ import PostImg from '@/assets/img/posts/white-concrete-building.png';
 import { HomePosts } from '@/components/ui/HomePosts/HomePosts';
 import { OurMission } from '@/components/ui/OurMission/OurMission';
 import { Categories } from '@/components/ui/Categories/Categories';
+import { WhyWeStarted } from '@/components/ui/WhyWeStarted/WhyWeStarted';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       />
       <OurMission />
       <Categories />
+      <WhyWeStarted />
     </main>
   );
 }

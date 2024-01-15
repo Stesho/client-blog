@@ -29,6 +29,12 @@
     },
     "categories": {
       "title": "Choose a category"
+    },
+    "whyWeStarted": {
+      "caption": "Why we started",
+      "title": "It started out as a simple idea and evolved into our passion",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+      "button": "Discover our story >"
     }
   },
   "footer": {
