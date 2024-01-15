@@ -9,6 +9,9 @@
     "button": "Видео о нас"
   },
   "home": {
+    "featuredPost": {
+      "title": "Избранный пост"
+    },
     "allPosts": {
       "title": "Все посты",
       "button": "Показать все"

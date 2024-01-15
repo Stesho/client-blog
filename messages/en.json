@@ -9,6 +9,9 @@
     "button": "Video about us"
   },
   "home": {
+    "featuredPost": {
+      "title": "Featured Post"
+    },
     "allPosts": {
       "title": "All posts",
       "button": "View all"

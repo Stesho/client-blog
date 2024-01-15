@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/Button/Button';
 import { BlogCard, BlogCardProps } from '@/components/ui/BlogCard/BlogCard';
+import { useTranslations } from 'next-intl';
 import styles from './FeaturedPost.module.scss';
 
 export type FeaturedPostProps = BlogCardProps;
@@ -12,9 +13,12 @@ export const FeaturedPost = ({
   title,
   text,
   date,
-}: FeaturedPostProps) => (
+}: FeaturedPostProps) => {
+  const t = useTranslations('home.featuredPost');
+
+  return (
     <article className={styles.article}>
-      <h2 className={`${styles.header} heading2`}>Featured Post</h2>
+      <h2 className={`${styles.header} heading2`}>{t('title')}</h2>
       <div className={styles.wrapper}>
         <BlogCard
           imageURL={imageURL}
@@ -28,3 +32,4 @@ export const FeaturedPost = ({
       </div>
     </article>
   );
+};

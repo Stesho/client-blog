@@ -1,6 +1,10 @@
 @import '@/styles/colors.scss';
 
 .headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   color: $white;
   background-color: $black;
   padding: 12px 0;
