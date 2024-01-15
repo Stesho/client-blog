@@ -2,7 +2,7 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import styles from './BlogCard.module.scss';
 
-interface BlogCardProps {
+export interface BlogCardProps {
   imageURL: StaticImageData;
   alt: string;
   author: string;

@@ -6,16 +6,18 @@ import styles from './Button.module.scss';
 interface ButtonProps {
   children: ReactNode;
   styleType?: ButtonTypes;
+  className?: string;
 }
 
 export const Button = ({
   children,
+  className,
   styleType = ButtonTypes.Primary,
 }: ButtonProps) => (
-    <button
-      type='button'
-      className={classNames(styles.button, styles[styleType])}
-    >
-      {children}
-    </button>
-  );
+  <button
+    type='button'
+    className={classNames(styles.button, className, styles[styleType])}
+  >
+    {children}
+  </button>
+);

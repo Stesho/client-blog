@@ -17,6 +17,10 @@
   padding: 0 20px;
 }
 
+.section {
+  margin-bottom: 128px;
+}
+
 // Heading
 .display {
   @extend %heading;

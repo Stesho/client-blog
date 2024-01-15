@@ -8,23 +8,27 @@ export const HomeAllPosts = () => {
   const t = useTranslations('home.allPosts');
 
   return (
-    <section className={styles.section}>
+    <article className={styles.section}>
       <div className={styles.header}>
         <h2 className='heading2'>{t('title')}</h2>
         <button type='button' className={`${styles.viewAll} body1`}>
           {t('button')}
         </button>
       </div>
-      {[...new Array(4)]
-        .map((_, ind) => ({ ...POSTS[0], id: POSTS[0].id + ind }))
-        .map((post) => (
-          <HomePost
-            key={post.id}
-            author={post.author}
-            date={post.date}
-            title={post.title}
-          />
-        ))}
-    </section>
+      <ul>
+        {[...new Array(4)]
+          .map((_, ind) => ({ ...POSTS[0], id: POSTS[0].id + ind }))
+          .map((post) => (
+            <li>
+              <HomePost
+                key={post.id}
+                author={post.author}
+                date={post.date}
+                title={post.title}
+              />
+            </li>
+          ))}
+      </ul>
+    </article>
   );
 };
