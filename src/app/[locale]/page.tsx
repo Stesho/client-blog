@@ -5,6 +5,7 @@ import { HomePosts } from '@/components/ui/HomePosts/HomePosts';
 import { OurMission } from '@/components/ui/OurMission/OurMission';
 import { Categories } from '@/components/ui/Categories/Categories';
 import { WhyWeStarted } from '@/components/ui/WhyWeStarted/WhyWeStarted';
+import { AuthorsList } from '@/components/ui/AuthorsList/AuthorsList';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <OurMission />
       <Categories />
       <WhyWeStarted />
+      <AuthorsList />
     </main>
   );
 }
