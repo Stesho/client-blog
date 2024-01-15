@@ -10,11 +10,8 @@ import AuthorImage from '@/assets/img/author/man-in-yellow.png';
 import { BlogCard } from '@/components/ui/BlogCard/BlogCard';
 import { CategoryButton } from '@/components/ui/CategoryButton/CategoryButton';
 import { Input } from '@/components/ui/Input/Input';
-import { useTranslations } from 'next-intl';
 
 export default function Home() {
-  const t = useTranslations('blogPostCard');
-
   return (
     <main>
       <Header />
@@ -22,7 +19,7 @@ export default function Home() {
         imageURL={BlogImage}
         alt='two women in front of board'
         type='Startup'
-        title={t('title')}
+        title='Subscribe to our news letter to get latest updates and news'
         text='Duis aute irure dolor in reprehenderit in voluptate velit
           esse cillum dolore eu fugiat nulla pariatur. Excepteur
           sint occaecat cupidatat non proident.'

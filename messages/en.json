@@ -1,5 +1,21 @@
 {
-  "blogPostCard": {
-    "title": "Design tips for designers that cover everything you need"
+  "header": {
+    "nav": {
+      "home": "Home",
+      "blog": "Blog",
+      "about": "About us",
+      "contacts": "Contact us"
+    },
+    "button": "Video about us"
+  },
+  "footer": {
+    "text": "Subscribe to our news letter to get latest updates and news",
+    "nav": {
+      "home": "Home",
+      "blog": "Blog",
+      "about": "About us",
+      "contacts": "Contact us",
+      "privacyPolicy": "Privacy Policy"
+    }
   }
 }
