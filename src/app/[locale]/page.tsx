@@ -3,6 +3,7 @@ import { HomeInfo } from '@/components/ui/HomeInfo/HomeInfo';
 import PostImg from '@/assets/img/posts/white-concrete-building.png';
 import { HomePosts } from '@/components/ui/HomePosts/HomePosts';
 import { OurMission } from '@/components/ui/OurMission/OurMission';
+import { Categories } from '@/components/ui/Categories/Categories';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         date='May 23, 2022'
       />
       <OurMission />
+      <Categories />
     </main>
   );
 }
