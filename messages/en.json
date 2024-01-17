@@ -8,6 +8,38 @@
     },
     "button": "Video about us"
   },
+  "home": {
+    "featuredPost": {
+      "title": "Featured Post"
+    },
+    "allPosts": {
+      "title": "All posts",
+      "button": "View all"
+    },
+    "about": {
+      "caption": "About us",
+      "title": "We are a community of content writers who share their learnings",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "button": "Read more >"
+    },
+    "mission": {
+      "caption": "Our mission",
+      "title": "Creating valuable content for creatives all around the world",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "categories": {
+      "title": "Choose a category"
+    },
+    "whyWeStarted": {
+      "caption": "Why we started",
+      "title": "It started out as a simple idea and evolved into our passion",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+      "button": "Discover our story >"
+    },
+    "authors": {
+      "title": "List of Authors"
+    }
+  },
   "footer": {
     "text": "Subscribe to our news letter to get latest updates and news",
     "nav": {

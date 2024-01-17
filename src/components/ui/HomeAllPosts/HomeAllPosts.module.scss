@@ -1,0 +1,23 @@
+@import '@/styles/colors.scss';
+
+.section {
+  max-width: 517px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 32px 0;
+  text-transform: capitalize;
+}
+
+.viewAll {
+  color: $purple;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba($purple, 0.7);
+  }
+}

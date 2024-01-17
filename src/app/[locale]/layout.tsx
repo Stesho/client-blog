@@ -1,12 +1,24 @@
+import '@/styles/reset.scss';
+import '@/styles/global.scss';
+
 import React, { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter, Sen } from 'next/font/google';
 import { PageParams } from '@/types/pageParams';
-import '@/styles/reset.scss';
-import '@/styles/global.scss';
+import { Header } from '@/components/ui/Header/Header';
+import { Footer } from '@/components/ui/Footer/Footer';
 
-const sen = Sen({ subsets: ['latin'], weight: ['400', '500', '700'] });
-const inter = Inter({ subsets: ['latin'] });
+const sen = Sen({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-sen',
+  display: 'swap',
+});
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -26,7 +38,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.locale}>
-      <body className={`${inter.className} ${sen.className}`}>{children}</body>
+      <body className={`${inter.className} ${sen.className}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

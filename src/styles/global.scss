@@ -11,6 +11,27 @@
   font-weight: 400;
 }
 
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  margin-bottom: 128px;
+}
+
+// Cap
+.cap {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+// Heading
 .display {
   @extend %heading;
   font-size: 56px;
@@ -57,6 +78,7 @@
   line-height: 24px;
 }
 
+// Body
 .body1 {
   @extend %body;
   font-size: 16px;
@@ -69,6 +91,7 @@
   line-height: 20px;
 }
 
+// Label
 .label {
   font-family: var(--font-inter);
   font-size: 14px;

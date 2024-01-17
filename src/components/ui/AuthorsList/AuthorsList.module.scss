@@ -1,0 +1,14 @@
+.title {
+  margin: 0 0 48px 0;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.listItem {
+  flex: 1;
+  max-width: 296px;
+}

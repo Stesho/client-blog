@@ -8,6 +8,38 @@
     },
     "button": "Видео о нас"
   },
+  "home": {
+    "featuredPost": {
+      "title": "Избранный пост"
+    },
+    "allPosts": {
+      "title": "Все посты",
+      "button": "Показать все"
+    },
+    "about": {
+      "caption": "О нас",
+      "title": "Мы - сообщество создателей контента, которые делятся своими знаниями",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "button": "Далее >"
+    },
+    "mission": {
+      "caption": "Наша миссия",
+      "title": "Создание ценного контента для творческих людей по всему миру",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "categories": {
+      "title": "Выберите категорию"
+    },
+    "whyWeStarted": {
+      "caption": "Почему мы начали",
+      "title": "Все началось с простой идеи и превратилось в нашу страсть.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+      "button": "Узнайте нашу историю >"
+    },
+    "authors": {
+      "title": "Список авторов"
+    }
+  },
   "footer": {
     "text": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
     "nav": {
