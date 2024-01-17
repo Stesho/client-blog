@@ -1,0 +1,26 @@
+@import '@/styles/colors.scss';
+
+.header {
+  padding: 0 0 32px 0;
+  border-bottom: 1px solid rgba($grey-400, 0.32);
+}
+
+.list {
+  padding: 64px 0 0 0;
+
+  li {
+    margin: 0 0 64px 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.controller {
+  cursor: pointer;
+  &:first-child {
+    margin: 0 20px 0 0;
+  }
+}

@@ -16,18 +16,16 @@ export const HomeAllPosts = () => {
         </button>
       </div>
       <ul>
-        {[...new Array(4)]
-          .map((_, ind) => ({ ...POSTS[0], id: POSTS[0].id + ind }))
-          .map((post) => (
-            <li>
-              <HomePost
-                key={post.id}
-                author={post.author}
-                date={post.date}
-                title={post.title}
-              />
-            </li>
-          ))}
+        {POSTS.slice(0, 4).map((post) => (
+          <li>
+            <HomePost
+              key={post.id}
+              author={post.author}
+              date={post.date}
+              title={post.title}
+            />
+          </li>
+        ))}
       </ul>
     </article>
   );
