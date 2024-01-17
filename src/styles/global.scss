@@ -1,4 +1,5 @@
 @import './colors';
+@import './vars';
 
 %heading {
   color: $black;
@@ -19,6 +20,10 @@
 
 .section {
   margin-bottom: 128px;
+}
+
+.topSection {
+  margin-top: $header-height;
 }
 
 // Cap
