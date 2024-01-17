@@ -1,11 +1,23 @@
 @import '@/styles/colors.scss';
 
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 96px;
   margin-bottom: 96px;
+  animation: slideUp 1500ms ease;
 }
 
 .list {

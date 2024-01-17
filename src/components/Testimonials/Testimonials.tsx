@@ -12,12 +12,12 @@ export const Testimonials = () => {
   const nextSlide = () => setStep((prev) => prev + 1);
 
   return (
-    <section className="section container">
+    <section className={`${styles.section} section container`}>
       <div className={styles.wrapper}>
         <div className={styles.text}>
-          <span className="cap">Testimonials</span>
-          <h3 className="heading3">What people say about our blog</h3>
-          <p className="body1">
+          <span className='cap'>Testimonials</span>
+          <h3 className='heading3'>What people say about our blog</h3>
+          <p className='body1'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor.
           </p>
