@@ -8,6 +8,7 @@ import { WhyWeStarted } from '@/components/ui/WhyWeStarted/WhyWeStarted';
 import { AuthorsList } from '@/components/ui/AuthorsList/AuthorsList';
 import { FeaturedIn } from '@/components/ui/FeaturedIn/FeaturedIn';
 import { Testimonials } from '@/components/Testimonials/Testimonials';
+import { Join } from '@/components/ui/Join/Join';
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <AuthorsList />
       <FeaturedIn />
       <Testimonials />
+      <Join />
     </main>
   );
 }
