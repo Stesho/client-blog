@@ -37,7 +37,17 @@
       "button": "Узнайте нашу историю >"
     },
     "authors": {
-      "title": "Список авторов"
+      "title": "Список Авторов"
+    },
+    "testimonials": {
+      "caption": "Отзывы",
+      "title": "Что говорят о нашем блоге",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+    },
+    "join": {
+      "title": "Присоединяйтесь к нашей команде, чтобы стать частью нашей истории",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "button": "Присоединиться сейчас"
     }
   },
   "footer": {
