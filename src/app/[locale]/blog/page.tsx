@@ -4,7 +4,7 @@ import { BlogHead } from '@/components/ui/BlogHead/BlogHead';
 import { BlogAllPosts } from '@/components/ui/BlogAllPosts/BlogAllPosts';
 import { Categories } from '@/components/ui/Categories/Categories';
 
-export default function Blog() {
+export default function BlogPage() {
   return (
     <main>
       <BlogHead />

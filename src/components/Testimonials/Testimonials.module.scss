@@ -22,16 +22,48 @@
 }
 
 .text {
+  height: 300px;
+  width: 430px;
   padding: 0 84px 0 0;
   border-right: 1px solid rgba($grey-400, 0.4);
+
+  h3 {
+    margin: 12px 0 16px 0;
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 470px;
+  height: 309px;
+  margin: 0 0 0 96px;
+  overflow: hidden;
+}
+
+.line {
+  height: 100%;
+  position: absolute;
+  display: flex;
 }
 
 .testimonial {
-  padding: 0 0 0 96px;
+  width: 470px;
+  position: relative;
+  transition: all 500ms linear;
+}
+
+.review {
+  flex: 1;
 }
 
 .author {
   display: flex;
+  margin: 121px 0 0 0;
+
+  img {
+    margin: 0 16px 0 0;
+    border-radius: 50%;
+  }
 }
 
 .info {
@@ -40,31 +72,35 @@
   }
 }
 
-.carousel {
-  position: relative;
-}
-
 .controllers {
   display: flex;
+  align-items: center;
   position: absolute;
   top: 100%;
   left: 100%;
   transform: translate(-100%, -100%);
 
   button {
-    width: 30px;
-    height: 30px;
+    width: 62px;
+    height: 62px;
     background-color: $black;
     border-radius: 50%;
     color: $white;
     cursor: pointer;
+
+    &:first-child {
+      margin: 0 24px 0 0;
+    }
 
     &:hover {
       background-color: $grey-400;
     }
 
     &:disabled {
-      background-color: $grey-300;
+      width: 48px;
+      height: 48px;
+      background-color: $white;
+      color: $black;
     }
   }
 }

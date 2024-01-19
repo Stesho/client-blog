@@ -10,6 +10,7 @@ import { FeaturedIn } from '@/components/ui/FeaturedIn/FeaturedIn';
 import { Testimonials } from '@/components/Testimonials/Testimonials';
 import { Join } from '@/components/ui/Join/Join';
 import { InfiniteScroll } from '@/components/InfiniteScroll/InfiniteScroll';
+import { AUTHORS } from '@/constants/authors';
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
         <OurMission />
         <Categories />
         <WhyWeStarted />
-        <AuthorsList />
+        <AuthorsList authors={AUTHORS.slice(0, 4)} />
         <FeaturedIn />
         <Testimonials />
         <Join />

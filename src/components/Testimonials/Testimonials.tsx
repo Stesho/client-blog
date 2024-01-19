@@ -23,15 +23,26 @@ export const Testimonials = () => {
           </p>
         </div>
         <div className={styles.carousel}>
-          <div className={styles.testimonial}>
-            <p className={`${styles.review} heading4`}>{REVIEWS[step].text}</p>
-            <div className={styles.author}>
-              <Image src={REVIEWS[step].author.profileURL} alt='author' />
-              <div className={styles.info}>
-                <span>{REVIEWS[step].author.name}</span>
-                <span>{REVIEWS[step].author.place}</span>
+          <div className={styles.line}>
+            {REVIEWS.map((review) => (
+              <div
+                className={styles.testimonial}
+                style={{ transform: `translateX(-${step * 100}%)` }}
+              >
+                <p className={`${styles.review} heading4`}>{review.text}</p>
+                <div className={styles.author}>
+                  <Image src={review.author.profileURL} alt='author' />
+                  <div className={styles.info}>
+                    <span className={`${styles.authorName} heading4`}>
+                      {review.author.name}
+                    </span>
+                    <span className={`${styles.place} body1`}>
+                      {review.author.place}
+                    </span>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
           <div className={styles.controllers}>
             <button

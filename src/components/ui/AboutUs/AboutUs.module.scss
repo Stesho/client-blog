@@ -1,0 +1,15 @@
+@import '@/styles/colors.scss';
+
+.section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1133px;
+  top: 50px;
+}
+
+.header {
+  padding: 64px;
+  margin: 0 32px 0 0;
+  background-color: $white;
+}
