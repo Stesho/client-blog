@@ -9,9 +9,9 @@ import WhyWeStartedImg from '@/assets/img/aboutUs/three-persons-sitting.jpg';
 import { AuthorsList } from '@/components/ui/AuthorsList/AuthorsList';
 import { AUTHORS } from '@/constants/authors';
 import { Join } from '@/components/ui/Join/Join';
-import styles from './AboutUsPage.module.scss';
+import styles from './AboutPage.module.scss';
 
-export default function AboutUsPage() {
+export default function AboutPage() {
   return (
     <main>
       <AboutUs />
@@ -34,7 +34,7 @@ export default function AboutUsPage() {
         image={WhyWeStartedImg}
         isReversed
       />
-      <AuthorsList authors={AUTHORS.slice(0, 8)} className="section" />
+      <AuthorsList authors={AUTHORS.slice(0, 8)} className='section' />
       <Join />
     </main>
   );

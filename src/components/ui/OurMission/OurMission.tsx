@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { ROUTES } from '@/constants/routes';
 import styles from './OurMission.module.scss';
 
 export const OurMission = () => {
@@ -16,9 +18,11 @@ export const OurMission = () => {
           <span className='cap'>{t('about.caption')}</span>
           <h2 className={`${styles.header} heading2`}>{t('about.title')}</h2>
           <p className='body1'>{t('about.text')}</p>
-          <button type='button' className={styles.readMore}>
-            {t('about.button')}
-          </button>
+          <Link href={ROUTES.about}>
+            <button type='button' className={styles.readMore}>
+              {t('about.button')}
+            </button>
+          </Link>
         </article>
         <article className={`${styles.article} ${styles.ourMission}`}>
           <span className='cap'>{t('mission.caption')}</span>

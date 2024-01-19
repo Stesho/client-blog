@@ -1,18 +1,18 @@
 import React from 'react';
 import { Button } from '@/components/ui/Button/Button';
-import { BlogCard, BlogCardProps } from '@/components/ui/BlogCard/BlogCard';
+import { BlogCard } from '@/components/ui/BlogCard/BlogCard';
 import { useTranslations } from 'next-intl';
+import { Post } from '@/types/post';
+import Link from 'next/link';
+import { ROUTES } from '@/constants/routes';
 import styles from './FeaturedPost.module.scss';
 
-export type FeaturedPostProps = BlogCardProps;
+interface FeaturedPostProps {
+  post: Post;
+}
 
 export const FeaturedPost = ({
-  imageURL,
-  alt,
-  author,
-  title,
-  text,
-  date,
+  post: { id, image, author, date, text, title },
 }: FeaturedPostProps) => {
   const t = useTranslations('home.featuredPost');
 
@@ -21,14 +21,16 @@ export const FeaturedPost = ({
       <h2 className={`${styles.header} heading2`}>{t('title')}</h2>
       <div className={styles.wrapper}>
         <BlogCard
-          imageURL={imageURL}
-          alt={alt}
+          imageURL={image}
+          alt={title}
           title={title}
           text={text}
           author={author}
           date={date}
         />
-        <Button className={styles.button}>Read More {'>'}</Button>
+        <Link href={`${ROUTES.blog}/${id}`}>
+          <Button className={styles.button}>Read More {'>'}</Button>
+        </Link>
       </div>
     </article>
   );

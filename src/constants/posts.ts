@@ -1,4 +1,8 @@
-import WomenImg from '@/assets/img/blogPost/two-women-in-front-of-board.png';
+import Blog5Img from '@/assets/img/blogPost/two-women-in-front-of-board.png';
+import Blog4Img from '@/assets/img/posts/white-concrete-building.png';
+import Blog3Img from '@/assets/img/posts/photo-of-people-walking.jpg';
+import Blog2Img from '@/assets/img/posts/photo-of-woman.jpg';
+import Blog1Img from '@/assets/img/posts/photo-of-people.jpg';
 import { Post } from '@/types/post';
 
 export const POSTS: Post[] = [
@@ -9,7 +13,7 @@ export const POSTS: Post[] = [
     title: 'Design tips for designers that cover everything you need',
     type: 'Startup',
     text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    image: WomenImg,
+    image: Blog1Img,
   },
   {
     id: '2',
@@ -18,7 +22,7 @@ export const POSTS: Post[] = [
     title: 'How to build rapport with your web design clients',
     type: 'Business',
     text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    image: WomenImg,
+    image: Blog2Img,
   },
   {
     id: '3',
@@ -27,7 +31,7 @@ export const POSTS: Post[] = [
     title: 'Logo design trends to avoid in 2022',
     type: 'Startup',
     text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    image: WomenImg,
+    image: Blog3Img,
   },
   {
     id: '4',
@@ -36,7 +40,7 @@ export const POSTS: Post[] = [
     title: '8 Figma design systems you can download for free today',
     type: 'Technology',
     text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    image: WomenImg,
+    image: Blog4Img,
   },
   {
     id: '5',
@@ -45,7 +49,7 @@ export const POSTS: Post[] = [
     title: 'Font sizes in UI design: The complete guide to follow',
     type: 'Economy',
     text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    image: WomenImg,
+    image: Blog5Img,
   },
   {
     id: '6',
@@ -54,7 +58,7 @@ export const POSTS: Post[] = [
     title: 'Font sizes in UI design: The complete guide to follow',
     type: 'Economy',
     text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    image: WomenImg,
+    image: Blog3Img,
   },
   {
     id: '7',
@@ -63,7 +67,7 @@ export const POSTS: Post[] = [
     title: '8 Figma design systems you can download for free today',
     type: 'Economy',
     text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    image: WomenImg,
+    image: Blog5Img,
   },
   {
     id: '8',
@@ -72,7 +76,7 @@ export const POSTS: Post[] = [
     title: 'Font sizes in UI design: The complete guide to follow',
     type: 'Economy',
     text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    image: WomenImg,
+    image: Blog1Img,
   },
   {
     id: '9',
@@ -81,7 +85,7 @@ export const POSTS: Post[] = [
     title: '8 Figma design systems you can download for free today',
     type: 'Economy',
     text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    image: WomenImg,
+    image: Blog2Img,
   },
   {
     id: '10',
@@ -90,6 +94,6 @@ export const POSTS: Post[] = [
     title: 'The complete guide to follow',
     type: 'Economy',
     text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    image: WomenImg,
+    image: Blog4Img,
   },
 ];
