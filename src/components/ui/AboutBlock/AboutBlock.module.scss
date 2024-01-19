@@ -1,0 +1,24 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle {
+  margin: 16px 0;
+}
+
+.content {
+  max-width: 519px;
+  margin: 0 20px 0 0;
+}
+
+.image {
+  width: 624px;
+  height: 480px;
+  object-fit: cover;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}

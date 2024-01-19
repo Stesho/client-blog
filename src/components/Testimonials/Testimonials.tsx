@@ -12,26 +12,37 @@ export const Testimonials = () => {
   const nextSlide = () => setStep((prev) => prev + 1);
 
   return (
-    <section className="section container">
+    <section className={`${styles.section} section container`}>
       <div className={styles.wrapper}>
         <div className={styles.text}>
-          <span className="cap">Testimonials</span>
-          <h3 className="heading3">What people say about our blog</h3>
-          <p className="body1">
+          <span className='cap'>Testimonials</span>
+          <h3 className='heading3'>What people say about our blog</h3>
+          <p className='body1'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor.
           </p>
         </div>
         <div className={styles.carousel}>
-          <div className={styles.testimonial}>
-            <p className={`${styles.review} heading4`}>{REVIEWS[step].text}</p>
-            <div className={styles.author}>
-              <Image src={REVIEWS[step].author.profileURL} alt='author' />
-              <div className={styles.info}>
-                <span>{REVIEWS[step].author.name}</span>
-                <span>{REVIEWS[step].author.place}</span>
+          <div className={styles.line}>
+            {REVIEWS.map((review) => (
+              <div
+                className={styles.testimonial}
+                style={{ transform: `translateX(-${step * 100}%)` }}
+              >
+                <p className={`${styles.review} heading4`}>{review.text}</p>
+                <div className={styles.author}>
+                  <Image src={review.author.profileURL} alt='author' />
+                  <div className={styles.info}>
+                    <span className={`${styles.authorName} heading4`}>
+                      {review.author.name}
+                    </span>
+                    <span className={`${styles.place} body1`}>
+                      {review.author.place}
+                    </span>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
           <div className={styles.controllers}>
             <button

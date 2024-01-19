@@ -37,7 +37,24 @@
       "button": "Узнайте нашу историю >"
     },
     "authors": {
-      "title": "Список авторов"
+      "title": "Список Авторов"
+    },
+    "testimonials": {
+      "caption": "Отзывы",
+      "title": "Что говорят о нашем блоге",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+    },
+    "join": {
+      "title": "Присоединяйтесь к нашей команде, чтобы стать частью нашей истории",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "button": "Присоединиться сейчас"
+    }
+  },
+  "about": {
+    "vision": {
+      "caption": "Наша миссия",
+      "title": "Создание ценного контента для творческих людей по всему миру",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   },
   "footer": {

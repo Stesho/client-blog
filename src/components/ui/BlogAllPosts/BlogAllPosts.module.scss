@@ -1,0 +1,45 @@
+@import '@/styles/colors.scss';
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header {
+  padding: 0 0 32px 0;
+  border-bottom: 1px solid rgba($grey-400, 0.32);
+}
+
+.list {
+  padding: 64px 0 0 0;
+  animation: show 1500ms linear;
+}
+
+.listItem {
+  margin: 0 0 64px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.controller {
+  cursor: pointer;
+
+  &:disabled {
+    color: $grey-400;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  &:first-child {
+    margin: 0 20px 0 0;
+  }
+}

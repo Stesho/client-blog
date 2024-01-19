@@ -38,6 +38,23 @@
     },
     "authors": {
       "title": "List of Authors"
+    },
+    "testimonials": {
+      "caption": "Testimonials",
+      "title": "What people say about our blog",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+    },
+    "join": {
+      "title": "Join our team to be a part of our story",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "button": "Join now"
+    }
+  },
+  "about": {
+    "vision": {
+      "caption": "Our Vision",
+      "title": "A platform that empowers individuals to improve",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   },
   "footer": {

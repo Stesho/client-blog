@@ -1,5 +1,6 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
+import classNames from 'classnames';
 import styles from './BlogPostCard.module.scss';
 
 interface BlogPostCardProps {
@@ -8,6 +9,7 @@ interface BlogPostCardProps {
   type: string;
   title: string;
   text: string;
+  className?: string;
 }
 
 export const BlogPostCard = ({
@@ -16,8 +18,9 @@ export const BlogPostCard = ({
   type,
   title,
   text,
+  className,
 }: BlogPostCardProps) => (
-  <div className={styles.blogPostCard}>
+  <div className={classNames(styles.blogPostCard, className)}>
     <Image className={styles.image} src={imageURL} alt={alt} />
     <div className={styles.content}>
       <span className={styles.type}>{type}</span>

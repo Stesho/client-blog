@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/Button/Button';
 import styles from './HomeInfo.module.scss';
 
 export const HomeInfo = () => (
-  <section className={`${styles.section} section`}>
+  <section className={`${styles.section} section topSection`}>
     <div className='container'>
       <span className={styles.postedOn}>
         Posted on <span>startup</span>

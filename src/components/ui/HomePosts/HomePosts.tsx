@@ -1,30 +1,16 @@
 import React from 'react';
-import {
-  FeaturedPost,
-  FeaturedPostProps,
-} from '@/components/ui/FeaturedPost/FeaturedPost';
+import { FeaturedPost } from '@/components/ui/FeaturedPost/FeaturedPost';
 import { HomeAllPosts } from '@/components/ui/HomeAllPosts/HomeAllPosts';
+import { Post } from '@/types/post';
 import styles from './HomePosts.module.scss';
 
-type HomePostsProps = FeaturedPostProps;
+interface HomePostsProps {
+  post: Post;
+}
 
-export const HomePosts = ({
-  imageURL,
-  alt,
-  author,
-  date,
-  text,
-  title,
-}: HomePostsProps) => (
-    <section className={`${styles.section} section container`}>
-      <FeaturedPost
-        imageURL={imageURL}
-        alt={alt}
-        author={author}
-        date={date}
-        title={title}
-        text={text}
-      />
-      <HomeAllPosts />
-    </section>
-  );
+export const HomePosts = ({ post }: HomePostsProps) => (
+  <section className={`${styles.section} section container`}>
+    <FeaturedPost post={post} />
+    <HomeAllPosts />
+  </section>
+);

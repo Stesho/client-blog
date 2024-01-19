@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/Button/Button';
 import { ButtonTypes } from '@/types/buttons';
 import { LangSelect } from '@/components/ui/LangSelect/LangSelect';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { ROUTES } from '@/constants/routes';
 import styles from './Header.module.scss';
 
 export const Header = () => {
@@ -14,9 +16,15 @@ export const Header = () => {
         <h2>Modsen Client Blog</h2>
         <nav className={styles.nav}>
           <ul className={styles.list}>
-            <li className={styles.link}>{t('nav.home')}</li>
-            <li className={styles.link}>{t('nav.blog')}</li>
-            <li className={styles.link}>{t('nav.about')}</li>
+            <li className={styles.link}>
+              <Link href={ROUTES.home}>{t('nav.home')}</Link>
+            </li>
+            <li className={styles.link}>
+              <Link href={ROUTES.blog}>{t('nav.blog')}</Link>
+            </li>
+            <li className={styles.link}>
+              <Link href={ROUTES.about}>{t('nav.about')}</Link>
+            </li>
             <li className={styles.link}>{t('nav.contacts')}</li>
           </ul>
           <LangSelect />
