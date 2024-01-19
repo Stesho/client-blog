@@ -1,8 +1,9 @@
 import WomenImg from '@/assets/img/blogPost/two-women-in-front-of-board.png';
+import { Post } from '@/types/post';
 
-export const POSTS = [
+export const POSTS: Post[] = [
   {
-    id: 1,
+    id: '1',
     author: 'John Doe',
     date: 'Aug 23, 2023',
     title: 'Design tips for designers that cover everything you need',
@@ -11,7 +12,7 @@ export const POSTS = [
     image: WomenImg,
   },
   {
-    id: 2,
+    id: '2',
     author: 'John Doe',
     date: 'Aug 23, 2023',
     title: 'How to build rapport with your web design clients',
@@ -20,7 +21,7 @@ export const POSTS = [
     image: WomenImg,
   },
   {
-    id: 3,
+    id: '3',
     author: 'John Doe',
     date: 'Aug 23, 2023',
     title: 'Logo design trends to avoid in 2022',
@@ -29,7 +30,7 @@ export const POSTS = [
     image: WomenImg,
   },
   {
-    id: 4,
+    id: '4',
     author: 'John Doe',
     date: 'Aug 23, 2023',
     title: '8 Figma design systems you can download for free today',
@@ -38,7 +39,7 @@ export const POSTS = [
     image: WomenImg,
   },
   {
-    id: 5,
+    id: '5',
     author: 'John Doe',
     date: 'Aug 23, 2023',
     title: 'Font sizes in UI design: The complete guide to follow',
@@ -47,7 +48,7 @@ export const POSTS = [
     image: WomenImg,
   },
   {
-    id: 6,
+    id: '6',
     author: 'Doe John',
     date: 'Aug 23, 2023',
     title: 'Font sizes in UI design: The complete guide to follow',
@@ -56,7 +57,7 @@ export const POSTS = [
     image: WomenImg,
   },
   {
-    id: 7,
+    id: '7',
     author: 'Doe John',
     date: 'Aug 23, 2023',
     title: '8 Figma design systems you can download for free today',
@@ -65,7 +66,7 @@ export const POSTS = [
     image: WomenImg,
   },
   {
-    id: 8,
+    id: '8',
     author: 'Doe John',
     date: 'Aug 23, 2023',
     title: 'Font sizes in UI design: The complete guide to follow',
@@ -74,7 +75,7 @@ export const POSTS = [
     image: WomenImg,
   },
   {
-    id: 9,
+    id: '9',
     author: 'Doe John',
     date: 'Aug 23, 2023',
     title: '8 Figma design systems you can download for free today',
@@ -83,7 +84,7 @@ export const POSTS = [
     image: WomenImg,
   },
   {
-    id: 10,
+    id: '10',
     author: 'Doe John',
     date: 'Aug 23, 2023',
     title: 'The complete guide to follow',

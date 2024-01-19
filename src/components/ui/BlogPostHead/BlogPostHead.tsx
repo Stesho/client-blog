@@ -4,23 +4,31 @@ import Author from '@/assets/img/home/review-author-1.jpg';
 import Shuttle from '@/assets/img/category/shuttle.png';
 import styles from './BlogPostHead.module.scss';
 
-export const BlogPostHead = () => (
+interface BlogPostHeadProps {
+  authorName: string;
+  postedDate: string;
+  title: string;
+  type: string;
+}
+
+export const BlogPostHead = ({
+  authorName,
+  title,
+  postedDate,
+  type,
+}: BlogPostHeadProps) => (
   <section className={`${styles.section} topSection`}>
     <div className={styles.author}>
       <Image className={styles.authorImg} src={Author} alt='author' />
       <div>
-        <span className={`${styles.authorName} heading3`}>Andrew Jonson</span>
-        <span className={`${styles.postedDate} body1`}>
-          Posted on 27th January 2022
-        </span>
+        <span className={`${styles.authorName} heading3`}>{authorName}</span>
+        <span className={`${styles.postedDate} body1`}>{postedDate}</span>
       </div>
     </div>
-    <h1 className='heading1'>
-      Step-by-step guide to choosing great font pairs
-    </h1>
+    <h1 className='heading1'>{title}</h1>
     <div className={styles.type}>
       <Image src={Shuttle} alt='shuttle' />
-      <span className='heading4'>Startup</span>
+      <span className='heading4'>{type}</span>
     </div>
   </section>
 );
