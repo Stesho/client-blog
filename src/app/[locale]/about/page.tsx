@@ -1,25 +1,19 @@
 import React from 'react';
-import Image from 'next/image';
 import { AboutUs } from '@/components/ui/AboutUs/AboutUs';
 import { OurVision } from '@/components/ui/OurVision/OurVision';
 import { AboutBlock } from '@/components/ui/AboutBlock/AboutBlock';
-import BgImg from '@/assets/img/aboutUs/photo-of-woman.jpg';
 import TeamImg from '@/assets/img/aboutUs/ground-group-growth.jpg';
 import WhyWeStartedImg from '@/assets/img/aboutUs/three-persons-sitting.jpg';
 import { AuthorsList } from '@/components/ui/AuthorsList/AuthorsList';
 import { AUTHORS } from '@/constants/authors';
 import { Join } from '@/components/ui/Join/Join';
-import styles from './AboutPage.module.scss';
+import { AboutStatistic } from '@/components/ui/AboutStatistic/AboutStatistic';
 
 export default function AboutPage() {
   return (
     <main>
       <AboutUs />
-      <Image
-        className={`${styles.bgImage} container`}
-        src={BgImg}
-        alt='background'
-      />
+      <AboutStatistic />
       <OurVision />
       <AboutBlock
         title='Our team of creatives'

@@ -47,19 +47,19 @@ export const Testimonials = () => {
           <div className={styles.controllers}>
             <button
               type='button'
-              className={styles.prev}
+              className={styles.controller}
               onClick={prevSlide}
               disabled={step === 0}
             >
-              ←
+              <span>←</span>
             </button>
             <button
               type='button'
-              className={styles.next}
+              className={styles.controller}
               onClick={nextSlide}
               disabled={step === REVIEWS.length - 1}
             >
-              →
+              <span>→</span>
             </button>
           </div>
         </div>
