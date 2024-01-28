@@ -1,14 +1,26 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button/Button';
 import { ButtonTypes } from '@/types/buttons';
 import { LangSelect } from '@/components/ui/LangSelect/LangSelect';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { ROUTES } from '@/constants/routes';
+import { VideoModal } from '@/components/VideoModal/VideoModal';
+import { HEADER_LINKS } from '@/constants/headerLinks';
 import styles from './Header.module.scss';
 
-export const Header = () => {
-  const t = useTranslations('header');
+interface HeaderProps {
+  messages: {
+    links: string[];
+    button: string;
+  };
+}
+
+export const Header = ({ messages }: HeaderProps) => {
+  const [isModalOpened, setIsModalOpened] = useState(false);
+
+  const openModal = () => setIsModalOpened(true);
+  const closeModal = () => setIsModalOpened(false);
 
   return (
     <header className={styles.headerWrapper}>
@@ -16,23 +28,19 @@ export const Header = () => {
         <h2>Modsen Client Blog</h2>
         <nav className={styles.nav}>
           <ul className={styles.list}>
-            <li className={styles.link}>
-              <Link href={ROUTES.home}>{t('nav.home')}</Link>
-            </li>
-            <li className={styles.link}>
-              <Link href={ROUTES.blog}>{t('nav.blog')}</Link>
-            </li>
-            <li className={styles.link}>
-              <Link href={ROUTES.about}>{t('nav.about')}</Link>
-            </li>
-            <li className={styles.link}>
-              <Link href={ROUTES.contacts}>{t('nav.contacts')}</Link>
-            </li>
+            {HEADER_LINKS.map((link, index) => (
+              <li key={link} className={styles.link}>
+                <Link href={link}>{messages.links[index]}</Link>
+              </li>
+            ))}
           </ul>
           <LangSelect />
-          <Button styleType={ButtonTypes.Secondary}>{t('button')}</Button>
+          <Button onClick={openModal} styleType={ButtonTypes.Secondary}>
+            {messages.button}
+          </Button>
         </nav>
       </div>
+      {isModalOpened && <VideoModal onClose={closeModal} />}
     </header>
   );
 };
