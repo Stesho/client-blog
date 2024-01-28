@@ -11,7 +11,7 @@ export const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className="container">
+      <div className='container'>
         <div className={styles.head}>
           <h2>Modsen Client Blog</h2>
           <nav className={styles.nav}>
@@ -20,7 +20,7 @@ export const Footer = () => {
               <li className={styles.link}>{t('nav.blog')}</li>
               <li className={styles.link}>{t('nav.about')}</li>
               <li className={styles.link}>{t('nav.contacts')}</li>
-              <li className={styles.link}>{t('nav.privacyPolicy')}</li>
+              <li className={styles.link}>{t('nav.privacypolicy')}</li>
             </ul>
           </nav>
         </div>
