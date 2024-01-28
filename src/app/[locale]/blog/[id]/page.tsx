@@ -10,7 +10,7 @@ import { ROUTES } from '@/constants/routes';
 import { getRecommendedPosts } from '@/utils/getRecommendedPosts';
 import styles from './page.module.scss';
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return POSTS.map((post) => ({
     id: post.id.toString(),
   }));
@@ -27,7 +27,7 @@ export default function BlogPost({ params }: { params: { id: string } }) {
   return (
     <main>
       <BlogPostHead
-        authorName={post.author}
+        authorName={post.author.name}
         postedDate={post.date}
         title={post.title}
         type={post.type}

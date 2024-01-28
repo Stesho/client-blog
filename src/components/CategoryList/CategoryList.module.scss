@@ -1,0 +1,23 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blogListItem {
+  margin: 0 0 32px 0;
+
+  img {
+    width: 294px;
+    height: 312px;
+  }
+}
+
+.controlBar {
+  max-width: 296px;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

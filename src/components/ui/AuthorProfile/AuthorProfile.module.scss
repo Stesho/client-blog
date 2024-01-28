@@ -1,0 +1,24 @@
+@import '@/styles/colors.scss';
+
+.section {
+  background-color: $grey-200;
+}
+
+.wrapper {
+  display: flex;
+  padding: 128px 0;
+}
+
+.avatar {
+  width: 251px;
+  height: 294px;
+  object-fit: cover;
+}
+
+.authorInfo {
+  margin: 0 0 0 32px;
+}
+
+.links {
+  display: flex;
+}

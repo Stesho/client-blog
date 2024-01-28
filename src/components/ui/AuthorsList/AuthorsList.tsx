@@ -18,7 +18,7 @@ export const AuthorsList = ({ authors, className }: AuthorsListProps) => {
       <h3 className={`${styles.title} heading2`}>{t('title')}</h3>
       <ul className={styles.list}>
         {authors.map((author) => (
-          <li className={styles.listItem}>
+          <li id={author.id} className={styles.listItem}>
             <AuthorCard
               imageURL={author.imageURL}
               alt={author.alt}

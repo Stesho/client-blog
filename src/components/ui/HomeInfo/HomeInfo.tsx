@@ -20,7 +20,8 @@ export const HomeInfo = ({ post }: HomeInfoProps) => {
         </span>
         <h1 className={`${styles.header} display`}>{post.title}</h1>
         <span className='body1'>
-          By <span className={styles.author}>{post.author}</span> | {post.date}
+          By <span className={styles.author}>{post.author.name}</span> |{' '}
+          {post.date}
         </span>
         <p className={`${styles.text} body1`}>
           {post.text.slice(0, maxTextLetters)}
