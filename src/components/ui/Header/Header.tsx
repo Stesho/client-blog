@@ -25,7 +25,9 @@ export const Header = () => {
             <li className={styles.link}>
               <Link href={ROUTES.about}>{t('nav.about')}</Link>
             </li>
-            <li className={styles.link}>{t('nav.contacts')}</li>
+            <li className={styles.link}>
+              <Link href={ROUTES.contacts}>{t('nav.contacts')}</Link>
+            </li>
           </ul>
           <LangSelect />
           <Button styleType={ButtonTypes.Secondary}>{t('button')}</Button>

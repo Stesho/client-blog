@@ -1,9 +1,10 @@
 @import '@/styles/colors.scss';
 
-.input {
+.textarea {
   padding: 14px 25px;
   background: none;
   line-height: 26px;
+  resize: none;
 }
 
 .primary {
