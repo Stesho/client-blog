@@ -1,7 +1,6 @@
 @import './colors';
 @import './vars';
 
-$maxWidth: 1920;
 @mixin adaptive-font($pcSize, $mobSize) {
   $addSize: $pcSize - $mobSize;
   $maxWidth: $maxWidth - 320;
@@ -29,10 +28,6 @@ $maxWidth: 1920;
 
 .section {
   margin-bottom: 128px;
-}
-
-.topSection {
-  margin-top: $header-height;
 }
 
 // Cap

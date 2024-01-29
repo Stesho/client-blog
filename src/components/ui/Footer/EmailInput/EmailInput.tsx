@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/Input/Input';
 import { Button } from '@/components/ui/Button/Button';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { contactsFormSchema } from '@/constants/validationSchemas';
+import { emailFormSchema } from '@/constants/validationSchemas';
 import { EmailFormData } from '@/types/forms';
 import emailjs from '@emailjs/browser';
 import {
@@ -22,7 +22,7 @@ export const EmailInput = () => {
     setValue,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(contactsFormSchema),
+    resolver: yupResolver(emailFormSchema),
   });
 
   const sendEmail = (data: EmailFormData) => {
