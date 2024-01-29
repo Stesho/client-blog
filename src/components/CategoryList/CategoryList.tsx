@@ -49,13 +49,7 @@ export const CategoryList = ({
         ) : (
           filteredPosts.map((post) => (
             <li key={post.id} className={styles.blogListItem}>
-              <BlogPostCard
-                imageURL={post.image}
-                alt={post.title}
-                type={post.type}
-                title={post.title}
-                text={post.text}
-              />
+              <BlogPostCard post={post} />
             </li>
           ))
         )}

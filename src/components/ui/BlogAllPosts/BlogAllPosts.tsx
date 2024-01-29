@@ -25,13 +25,7 @@ export const BlogAllPosts = () => {
           page * displayItemsCount + displayItemsCount,
         ).map((post) => (
           <li key={post.id} className={styles.listItem}>
-            <BlogPostCard
-              imageURL={post.image}
-              alt={post.type}
-              type={post.type}
-              title={post.title}
-              text={post.text}
-            />
+            <BlogPostCard post={post} />
           </li>
         ))}
       </ul>

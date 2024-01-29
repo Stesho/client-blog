@@ -26,6 +26,7 @@ export const Testimonials = () => {
           <div className={styles.line}>
             {REVIEWS.map((review) => (
               <div
+                key={review.id}
                 className={styles.testimonial}
                 style={{ transform: `translateX(-${step * 100}%)` }}
               >
