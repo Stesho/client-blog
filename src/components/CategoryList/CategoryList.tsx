@@ -58,7 +58,7 @@ export const CategoryList = ({
         <TagSearch />
         <div>
           <h3 className={`${styles.categoryTitle} heading2`}>Categories</h3>
-          <ul>
+          <ul className={styles.categoryList}>
             {CATEGORIES.map((category) => (
               <li key={category.id} className={styles.categoryItem}>
                 <Link

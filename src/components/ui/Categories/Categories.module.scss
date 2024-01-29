@@ -20,4 +20,18 @@
   display: flex;
   justify-content: space-between;
   animation: slideUp 1500ms ease;
+  gap: 0 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    li {
+      margin: 0 0 15px 0;
+    }
+
+    li > a > div {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
 }

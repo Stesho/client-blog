@@ -6,12 +6,21 @@
   align-items: center;
   max-width: 1133px;
   top: 50px;
+
+  @media (max-width: 768px) {
+    position: static;
+    flex-direction: column;
+  }
 }
 
 .header {
   padding: 64px;
   margin: 0 32px 0 0;
   background-color: $white;
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
 }
 
 .caption {

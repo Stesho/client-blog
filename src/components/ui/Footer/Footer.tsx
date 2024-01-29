@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Button } from '@/components/ui/Button/Button';
-import { Input } from '@/components/ui/Input/Input';
 import { FOOTER_LINKS } from '@/constants/footer';
+import { EmailInput } from '@/components/ui/Footer/EmailInput/EmailInput';
 import styles from './Footer.module.scss';
 
 export const Footer = () => {
@@ -20,16 +19,13 @@ export const Footer = () => {
               <li className={styles.link}>{t('nav.blog')}</li>
               <li className={styles.link}>{t('nav.about')}</li>
               <li className={styles.link}>{t('nav.contacts')}</li>
-              <li className={styles.link}>{t('nav.privacypolicy')}</li>
+              <li className={styles.link}>{t('nav.privacyPolicy')}</li>
             </ul>
           </nav>
         </div>
         <div className={styles.content}>
           <p className={`${styles.text} heading2`}>{t('text')}</p>
-          <div>
-            <Input className={styles.input} placeholder='Enter Your Email' />
-            <Button>Subscribe</Button>
-          </div>
+          <EmailInput />
         </div>
         <div className={styles.social}>
           <div>

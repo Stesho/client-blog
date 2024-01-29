@@ -1,6 +1,10 @@
 .section {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .postsList {
@@ -26,6 +30,20 @@
 
 .controlBar {
   max-width: 296px;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    margin: 0 0 100px 0;
+  }
+}
+
+.categoryList {
+  @media (max-width: 1024px) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 
 .categoryTitle {
@@ -34,6 +52,10 @@
 
 .categoryItem {
   margin: 0 0 24px 0;
+
+  @media (max-width: 1024px) {
+    margin: 0;
+  }
 }
 
 .tagsTitle {

@@ -16,10 +16,8 @@ export interface HeaderProps {
 export const Header = ({ messages }: HeaderProps) => {
   const maxWindowSizePx = 768;
   const [isModalOpened, setIsModalOpened] = useState(false);
+  const [isBurgerOpened, setIsBurgerOpened] = useState(false);
   const [windowSize] = useWindowSize();
-  const [isBurgerOpened, setIsBurgerOpened] = useState(
-    windowSize[0] > maxWindowSizePx,
-  );
 
   const openModal = () => setIsModalOpened(true);
   const closeModal = () => setIsModalOpened(false);
@@ -40,7 +38,11 @@ export const Header = ({ messages }: HeaderProps) => {
           <div className={styles.burgerLine} />
           <div className={styles.burgerLine} />
         </button>
-        {isBurgerOpened && <NavBar messages={messages} openModal={openModal} />}
+        {windowSize[0] <= maxWindowSizePx ? (
+          isBurgerOpened && <NavBar messages={messages} openModal={openModal} />
+        ) : (
+          <NavBar messages={messages} openModal={openModal} />
+        )}
       </div>
       {isModalOpened && <VideoModal onClose={closeModal} />}
     </header>

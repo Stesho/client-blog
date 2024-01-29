@@ -48,9 +48,13 @@ $maxWidth: 1920;
 // Heading
 .display {
   @extend %heading;
-  @include adaptive-font(56, 42);
+  @include adaptive-font(56, 38);
   line-height: 64px;
   letter-spacing: -2px;
+
+  @media (max-width: 425px) {
+    line-height: 42px;
+  }
 }
 
 .heading1 {

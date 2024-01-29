@@ -21,6 +21,10 @@
 .wrapper {
   padding: 32px;
   border: 1px solid rgba($grey-400, 0.1);
+
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
 }
 
 .button {

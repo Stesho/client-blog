@@ -34,11 +34,24 @@
   & h3 {
     color: $white;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 }
 
 .infoBlock {
   max-width: 294px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+
+    &:first-child {
+      margin: 0 0 50px 0;
+    }
+  }
 }
 
 .infoTopCaption {

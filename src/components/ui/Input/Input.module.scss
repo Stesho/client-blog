@@ -4,6 +4,10 @@
   padding: 14px 25px;
   background: none;
   line-height: 26px;
+
+  @media (max-width: 1024px) {
+    padding: 8px 16px;
+  }
 }
 
 .primary {

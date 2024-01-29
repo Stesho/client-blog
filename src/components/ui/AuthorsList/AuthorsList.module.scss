@@ -21,4 +21,8 @@
   flex-wrap: wrap;
   gap: 32px;
   animation: slideUp 1500ms ease;
+
+  @media (max-width: 663px) {
+    justify-content: center;
+  }
 }
