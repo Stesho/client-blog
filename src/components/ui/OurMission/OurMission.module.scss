@@ -35,10 +35,22 @@
   justify-content: space-between;
   padding: 96px 80px;
   background-color: $grey-200;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+    flex-direction: column-reverse;
+
+    .article {
+      max-width: 100%;
+    }
+    .article:first-child {
+      margin: 40px 0 0 0;
+    }
+  }
 }
 
 .article {
-  max-width: 516px;
+  max-width: 50%;
 }
 
 .aboutUs {

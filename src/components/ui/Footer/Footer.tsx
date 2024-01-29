@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Button } from '@/components/ui/Button/Button';
-import { Input } from '@/components/ui/Input/Input';
 import { FOOTER_LINKS } from '@/constants/footer';
+import { EmailInput } from '@/components/ui/Footer/EmailInput/EmailInput';
 import styles from './Footer.module.scss';
 
 export const Footer = () => {
@@ -11,7 +10,7 @@ export const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className="container">
+      <div className='container'>
         <div className={styles.head}>
           <h2>Modsen Client Blog</h2>
           <nav className={styles.nav}>
@@ -26,10 +25,7 @@ export const Footer = () => {
         </div>
         <div className={styles.content}>
           <p className={`${styles.text} heading2`}>{t('text')}</p>
-          <div>
-            <Input className={styles.input} placeholder='Enter Your Email' />
-            <Button>Subscribe</Button>
-          </div>
+          <EmailInput />
         </div>
         <div className={styles.social}>
           <div>

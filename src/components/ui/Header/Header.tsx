@@ -1,36 +1,50 @@
-import React from 'react';
-import { Button } from '@/components/ui/Button/Button';
-import { ButtonTypes } from '@/types/buttons';
-import { LangSelect } from '@/components/ui/LangSelect/LangSelect';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { ROUTES } from '@/constants/routes';
+'use client';
+
+import React, { useState } from 'react';
+import { VideoModal } from '@/components/VideoModal/VideoModal';
+import { useWindowSize } from '@/hooks/useWindowSize';
+import { NavBar } from '@/components/ui/Header/NavBar/NavBar';
 import styles from './Header.module.scss';
 
-export const Header = () => {
-  const t = useTranslations('header');
+export interface HeaderProps {
+  messages: {
+    links: string[];
+    button: string;
+  };
+}
+
+export const Header = ({ messages }: HeaderProps) => {
+  const maxWindowSizePx = 768;
+  const [isModalOpened, setIsModalOpened] = useState(false);
+  const [isBurgerOpened, setIsBurgerOpened] = useState(false);
+  const [windowSize] = useWindowSize();
+
+  const openModal = () => setIsModalOpened(true);
+  const closeModal = () => setIsModalOpened(false);
+
+  const toggleBurger = () => setIsBurgerOpened(!isBurgerOpened);
+  const burgerToCrossAnimation = () => (isBurgerOpened ? styles.cross : '');
 
   return (
     <header className={styles.headerWrapper}>
       <div className={`${styles.header} container`}>
-        <h2>Modsen Client Blog</h2>
-        <nav className={styles.nav}>
-          <ul className={styles.list}>
-            <li className={styles.link}>
-              <Link href={ROUTES.home}>{t('nav.home')}</Link>
-            </li>
-            <li className={styles.link}>
-              <Link href={ROUTES.blog}>{t('nav.blog')}</Link>
-            </li>
-            <li className={styles.link}>
-              <Link href={ROUTES.about}>{t('nav.about')}</Link>
-            </li>
-            <li className={styles.link}>{t('nav.contacts')}</li>
-          </ul>
-          <LangSelect />
-          <Button styleType={ButtonTypes.Secondary}>{t('button')}</Button>
-        </nav>
+        <h2 className={styles.title}>Modsen Client Blog</h2>
+        <button
+          type='button'
+          className={`${styles.burgerBtn} ${burgerToCrossAnimation()}`}
+          onClick={toggleBurger}
+        >
+          <div className={styles.burgerLine} />
+          <div className={styles.burgerLine} />
+          <div className={styles.burgerLine} />
+        </button>
+        {windowSize[0] <= maxWindowSizePx ? (
+          isBurgerOpened && <NavBar messages={messages} openModal={openModal} />
+        ) : (
+          <NavBar messages={messages} openModal={openModal} />
+        )}
       </div>
+      {isModalOpened && <VideoModal onClose={closeModal} />}
     </header>
   );
 };

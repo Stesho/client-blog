@@ -29,6 +29,9 @@
         "namedComponents": "arrow-function"
       }
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/button-has-type": "warn",
+    "jsx-a11y/control-has-associated-label": "warn",
+    "react/jsx-props-no-spreading": "warn"
   }
 }

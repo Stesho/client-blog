@@ -17,7 +17,7 @@ export const BlogPostHead = ({
   postedDate,
   type,
 }: BlogPostHeadProps) => (
-  <section className={`${styles.section} topSection`}>
+  <section className={`${styles.section} topSection container`}>
     <div className={styles.author}>
       <Image className={styles.authorImg} src={Author} alt='author' />
       <div>

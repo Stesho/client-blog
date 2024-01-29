@@ -7,6 +7,7 @@ import { Inter, Sen } from 'next/font/google';
 import { PageParams } from '@/types/pageParams';
 import { Header } from '@/components/ui/Header/Header';
 import { Footer } from '@/components/ui/Footer/Footer';
+import { useTranslations } from 'next-intl';
 
 const sen = Sen({
   subsets: ['latin'],
@@ -36,10 +37,20 @@ export default function RootLayout({
   children: ReactNode;
   params: PageParams;
 }) {
+  const t = useTranslations('header');
+  const headerLinks = ['home', 'blog', 'about', 'contacts'].map((key) =>
+    t(`nav.${key}`),
+  );
+
   return (
     <html lang={params.locale}>
       <body className={`${inter.className} ${sen.className}`}>
-        <Header />
+        <Header
+          messages={{
+            links: headerLinks,
+            button: t('button'),
+          }}
+        />
         {children}
         <Footer />
       </body>

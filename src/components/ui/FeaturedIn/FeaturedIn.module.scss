@@ -18,14 +18,29 @@
   margin-top: 96px;
   margin-bottom: 96px;
   animation: slideUp 1500ms ease;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 }
 
 .list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px 0;
+
+  @media (max-width: 425px) {
+    gap: 20px;
+    align-items: center;
+  }
 }
 
 .logoItem {
   margin: 0 0 0 74px;
+
+  @media (max-width: 425px) {
+    margin: 0;
+  }
 }
 
 .caption {
@@ -34,4 +49,8 @@
 
 .title {
   color: $grey-400;
+
+  @media (max-width: 425px) {
+    margin: 0 0 20px 0;
+  }
 }

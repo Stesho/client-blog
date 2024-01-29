@@ -15,9 +15,9 @@ import { POSTS } from '@/constants/posts';
 export default function Home() {
   return (
     <main>
-      <HomeInfo />
+      <HomeInfo post={POSTS[0]} />
       <InfiniteScroll>
-        <HomePosts post={POSTS[0]} />
+        <HomePosts post={POSTS[1]} />
         <OurMission />
         <Categories />
         <WhyWeStarted />

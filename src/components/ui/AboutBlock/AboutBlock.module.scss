@@ -2,6 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0 20px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 }
 
 .subtitle {
@@ -10,7 +15,10 @@
 
 .content {
   max-width: 519px;
-  margin: 0 20px 0 0;
+
+  @media (max-width: 1024px) {
+    margin: 0 0 40px 0;
+  }
 }
 
 .image {
@@ -21,4 +29,8 @@
 
 .reversed {
   flex-direction: row-reverse;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 }

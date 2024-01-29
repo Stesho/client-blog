@@ -1,0 +1,29 @@
+@import '@/styles/colors.scss';
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+
+  @media (max-width: 490px) {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.input {
+  margin: 0 24px 0 0;
+
+  input {
+    color: $white;
+  }
+
+  @media (max-width: 490px) {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}

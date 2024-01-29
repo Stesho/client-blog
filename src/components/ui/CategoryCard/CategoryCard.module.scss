@@ -1,8 +1,8 @@
 @import '@/styles/colors.scss';
+@import '@/styles/global.scss';
 
 .card {
   max-width: 296px;
-  max-height: 228px;
   padding: 32px;
   border: 1px solid rgba($grey-400, 0.3);
   cursor: pointer;
@@ -23,7 +23,7 @@
   margin: 16px 0 4px 0;
   color: $black;
   font-family: var(--font-sen);
-  font-size: 28px;
+  @include adaptive-font(28, 22);
   font-weight: 700;
   line-height: 40px;
   letter-spacing: -1px;
@@ -33,6 +33,6 @@
 .text {
   color: $grey-400;
   font-family: var(--font-inter);
-  font-size: 16px;
+  @include adaptive-font(16, 14);
   line-height: 28px;
 }

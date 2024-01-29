@@ -21,11 +21,11 @@ export const HomeAllPosts = () => {
       </div>
       <ul>
         {POSTS.slice(0, 4).map((post) => (
-          <li>
+          <li id={post.id}>
             <Link href={`${ROUTES.blog}/${post.id}`}>
               <HomePost
                 key={post.id}
-                author={post.author}
+                author={post.author.name}
                 date={post.date}
                 title={post.title}
               />

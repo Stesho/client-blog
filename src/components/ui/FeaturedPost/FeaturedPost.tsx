@@ -12,7 +12,7 @@ interface FeaturedPostProps {
 }
 
 export const FeaturedPost = ({
-  post: { id, image, author, date, text, title },
+  post: { id, image, date, text, title, author },
 }: FeaturedPostProps) => {
   const t = useTranslations('home.featuredPost');
 
@@ -25,7 +25,7 @@ export const FeaturedPost = ({
           alt={title}
           title={title}
           text={text}
-          author={author}
+          author={author.name}
           date={date}
         />
         <Link href={`${ROUTES.blog}/${id}`}>

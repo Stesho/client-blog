@@ -20,6 +20,11 @@
 .image {
   position: relative;
   z-index: -1;
+
+  @media (max-width: 768px) {
+    visibility: hidden;
+    margin: -240px 0 0 0;
+  }
 }
 
 .content {
@@ -30,6 +35,10 @@
   left: 100%;
   transform: translateX(-100%);
   background-color: $white;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 }
 
 .header {

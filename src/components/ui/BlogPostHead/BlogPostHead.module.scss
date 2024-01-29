@@ -1,9 +1,8 @@
-@import '@/styles/vars.scss';
 @import '@/styles/colors.scss';
 
 .section {
   max-width: 768px;
-  margin: (128px + $header-height) auto 64px auto;
+  margin: 128px auto 64px auto;
 }
 
 .author {
