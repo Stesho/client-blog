@@ -1,8 +1,8 @@
 export const TAGS = [
-  'Business',
-  'Experience',
-  'Screen',
-  'Technology',
-  'Marketing',
-  'Life',
+  'business',
+  'experience',
+  'screen',
+  'technology',
+  'marketing',
+  'life',
 ];

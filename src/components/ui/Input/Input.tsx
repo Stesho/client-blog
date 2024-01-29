@@ -1,11 +1,6 @@
 'use client';
 
-import React, {
-  ChangeEvent,
-  Dispatch,
-  HTMLInputTypeAttribute,
-  SetStateAction,
-} from 'react';
+import React, { ChangeEvent, HTMLInputTypeAttribute } from 'react';
 import classNames from 'classnames';
 import { InputTypes } from '@/types/inputs';
 import styles from './Input.module.scss';
@@ -17,7 +12,7 @@ interface InputProps {
   className?: string;
   name?: string;
   value: string;
-  onChange: Dispatch<SetStateAction<string>>;
+  onChange: (newValue: string) => void;
 }
 
 export const Input = ({

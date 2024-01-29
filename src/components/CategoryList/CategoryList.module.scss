@@ -3,6 +3,10 @@
   justify-content: space-between;
 }
 
+.postsList {
+  width: 100%;
+}
+
 .blogListItem {
   margin: 0 0 32px 0;
 
@@ -12,8 +16,28 @@
   }
 }
 
+.notFound {
+  width: 100%;
+  margin: 200px 0 0 0;
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+}
+
 .controlBar {
   max-width: 296px;
+}
+
+.categoryTitle {
+  margin: 0 0 40px 0;
+}
+
+.categoryItem {
+  margin: 0 0 24px 0;
+}
+
+.tagsTitle {
+  margin: 0 0 24px 0;
 }
 
 .tagList {

@@ -18,7 +18,7 @@ export const WhatToRead = ({ posts }: WhatToReadProps) => (
           <Link href={`${ROUTES.blog}/${post.id}`}>
             <BlogCard
               alt={post.title}
-              author={post.author}
+              author={post.author.name}
               date={post.date}
               imageURL={post.image}
               text={post.text}
