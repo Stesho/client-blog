@@ -30,6 +30,7 @@
       }
     ],
     "import/prefer-default-export": "off",
-    "react/button-has-type": "warn"
+    "react/button-has-type": "warn",
+    "jsx-a11y/control-has-associated-label": "warn"
   }
 }
