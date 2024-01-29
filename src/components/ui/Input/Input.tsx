@@ -1,41 +1,41 @@
 'use client';
 
-import React, { ChangeEvent, HTMLInputTypeAttribute } from 'react';
+import React, { HTMLInputTypeAttribute } from 'react';
 import classNames from 'classnames';
 import { InputTypes } from '@/types/inputs';
+import { FieldValues, Path, UseFormRegister } from 'react-hook-form';
 import styles from './Input.module.scss';
 
-interface InputProps {
+interface InputProps<T extends FieldValues> {
   type?: HTMLInputTypeAttribute;
   styleType?: InputTypes;
   placeholder?: string;
   className?: string;
-  name?: string;
-  value: string;
-  onChange: (newValue: string) => void;
+  label: Path<T>;
+  register: UseFormRegister<T>;
+  errorMessage?: string;
 }
 
-export const Input = ({
-  value,
-  onChange,
+export const Input = <T extends FieldValues>({
+  register,
+  label,
+  errorMessage,
   placeholder,
   className,
-  name,
   type = 'text',
   styleType = InputTypes.Primary,
-}: InputProps) => {
-  const onChangeValue = (event: ChangeEvent<HTMLInputElement>) => {
-    onChange(event.target.value);
-  };
-
-  return (
-    <input
-      type={type}
-      value={value}
-      onChange={onChangeValue}
-      placeholder={placeholder}
-      className={classNames(styles.input, className, styles[styleType])}
-      name={name}
-    />
+}: InputProps<T>) => (
+    <div className={classNames(styles.wrapper, className)}>
+      <input
+        {...register(label)}
+        type={type}
+        placeholder={placeholder}
+        className={classNames(styles.input, styles[styleType], {
+          [styles.error]: !!errorMessage,
+        })}
+      />
+      {!!errorMessage && (
+        <div className={styles.errorMessage}>{errorMessage}</div>
+      )}
+    </div>
   );
-};

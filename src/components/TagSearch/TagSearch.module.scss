@@ -5,11 +5,6 @@
   display: flex;
   margin: 0 0 58px 0;
 
-  & input {
-    width: 100%;
-    border-radius: 6px;
-  }
-
   & button {
     position: absolute;
     height: 100%;
@@ -17,6 +12,25 @@
     left: calc(100% + 1px);
     border-radius: 6px;
     transform: translateX(-100%);
+  }
+}
+
+.searchInput {
+  width: 100%;
+  padding: 14px 25px;
+  background: none;
+  line-height: 26px;
+  border-radius: 6px;
+  color: $black;
+  border: 1px solid rgba(109, 110, 118, 0.5);
+
+  &::placeholder {
+    color: $grey-500;
+    text-transform: capitalize;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 8px 16px;
   }
 }
 

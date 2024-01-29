@@ -1,6 +1,8 @@
 'use client';
 
-import React, { FormEvent, useState } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from '@emailjs/browser';
 import { Input } from '@/components/ui/Input/Input';
 import { Button } from '@/components/ui/Button/Button';
@@ -10,15 +12,21 @@ import {
   EMAIL_SERVICE_ID,
   EMAIL_TEMPLATE_ID,
 } from '@/constants/environment';
+import { contactsFormSchema } from '@/constants/validationSchemas';
+import { ContactsFormData } from '@/types/forms';
 import styles from './ContactsForm.module.scss';
 
 export const ContactsForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(contactsFormSchema),
+  });
 
-  const sendEmail = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const sendEmail = (data: ContactsFormData) => {
+    const { email, message, name } = data;
 
     const templateParams = {
       from_name: name,
@@ -45,10 +53,28 @@ export const ContactsForm = () => {
   };
 
   return (
-    <form className={`${styles.form} container`} onSubmit={sendEmail}>
-      <Input placeholder='Full name' value={name} onChange={setName} />
-      <Input placeholder='Your Email' value={email} onChange={setEmail} />
-      <Textarea placeholder='Message' value={message} onChange={setMessage} />
+    <form
+      className={`${styles.form} container`}
+      onSubmit={handleSubmit(sendEmail)}
+    >
+      <Input
+        placeholder='Full name'
+        label='name'
+        register={register}
+        errorMessage={errors.name?.message}
+      />
+      <Input
+        placeholder='Your Email'
+        label='email'
+        register={register}
+        errorMessage={errors.email?.message}
+      />
+      <Textarea
+        placeholder='Message'
+        label='message'
+        register={register}
+        errorMessage={errors.message?.message}
+      />
       <Button type='submit'>Send Message</Button>
     </form>
   );

@@ -31,6 +31,7 @@
     ],
     "import/prefer-default-export": "off",
     "react/button-has-type": "warn",
-    "jsx-a11y/control-has-associated-label": "warn"
+    "jsx-a11y/control-has-associated-label": "warn",
+    "react/jsx-props-no-spreading": "warn"
   }
 }

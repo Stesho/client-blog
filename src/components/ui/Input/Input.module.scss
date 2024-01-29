@@ -1,6 +1,12 @@
 @import '@/styles/colors.scss';
 
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .input {
+  width: 100%;
   padding: 14px 25px;
   background: none;
   line-height: 26px;
@@ -27,4 +33,15 @@
   &::placeholder {
     color: $grey-400;
   }
+}
+
+.errorMessage {
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 0;
+  color: $red;
+}
+
+.error {
+  border-color: $red;
 }
