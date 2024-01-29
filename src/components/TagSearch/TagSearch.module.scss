@@ -1,0 +1,56 @@
+@import '@/styles/colors.scss';
+
+.search {
+  position: relative;
+  display: flex;
+  margin: 0 0 58px 0;
+
+  & button {
+    position: absolute;
+    height: 100%;
+    padding: 11px;
+    left: calc(100% + 1px);
+    border-radius: 6px;
+    transform: translateX(-100%);
+  }
+}
+
+.searchInput {
+  width: 100%;
+  padding: 14px 25px;
+  background: none;
+  line-height: 26px;
+  border-radius: 6px;
+  color: $black;
+  border: 1px solid rgba(109, 110, 118, 0.5);
+
+  &::placeholder {
+    color: $grey-500;
+    text-transform: capitalize;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 8px 16px;
+  }
+}
+
+.postsList {
+  position: absolute;
+  top: 100%;
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid $grey-400;
+  border-bottom: none;
+}
+
+.postsItem {
+  width: 100%;
+  padding: 5px;
+  text-overflow: clip;
+  border-bottom: 1px solid $grey-400;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $yellow-100;
+  }
+}

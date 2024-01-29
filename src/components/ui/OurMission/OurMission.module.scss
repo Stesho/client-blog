@@ -1,0 +1,72 @@
+@import '@/styles/colors.scss';
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.section {
+  animation: show 1500ms linear;
+}
+
+.decorations {
+  display: flex;
+  justify-content: flex-end;
+  height: 23px;
+
+  & > div:first-child {
+    height: 100%;
+    width: 779px;
+    background-color: $yellow-100;
+  }
+  & div:nth-child(2) {
+    height: 100%;
+    width: 282px;
+    background-color: $purple;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 96px 80px;
+  background-color: $grey-200;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+    flex-direction: column-reverse;
+
+    .article {
+      max-width: 100%;
+    }
+    .article:first-child {
+      margin: 40px 0 0 0;
+    }
+  }
+}
+
+.article {
+  max-width: 50%;
+}
+
+.aboutUs {
+  margin: 0 60px 0 0;
+}
+
+.header {
+  margin: 24px 0 16px 0;
+}
+
+.readMore {
+  margin: 16px 0 0 0;
+  color: $purple;
+  font-family: var(--font-sen);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.title {
+  margin: 0 0 48px 0;
+  text-align: center;
+  animation: slideUp 1500ms ease;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  animation: slideUp 1500ms ease;
+
+  @media (max-width: 663px) {
+    justify-content: center;
+  }
+}

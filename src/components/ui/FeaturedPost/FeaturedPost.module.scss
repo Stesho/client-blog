@@ -1,0 +1,32 @@
+@import '@/styles/colors.scss';
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.article {
+  max-width: 733px;
+  animation: slideLeft 1000ms ease;
+}
+
+.header {
+  margin: 0 0 32px 0;
+}
+
+.wrapper {
+  padding: 32px;
+  border: 1px solid rgba($grey-400, 0.1);
+
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
+}
+
+.button {
+  margin: 32px 0 0 0;
+}

@@ -1,0 +1,36 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 20px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.subtitle {
+  margin: 16px 0;
+}
+
+.content {
+  max-width: 519px;
+
+  @media (max-width: 1024px) {
+    margin: 0 0 40px 0;
+  }
+}
+
+.image {
+  width: 624px;
+  height: 480px;
+  object-fit: cover;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}

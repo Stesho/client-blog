@@ -1,0 +1,45 @@
+@import '@/styles/colors.scss';
+
+.section {
+  background-color: $grey-200;
+}
+
+.wrapper {
+  display: flex;
+  padding-top: 128px;
+  padding-bottom: 128px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.avatar {
+  width: 251px;
+  height: 294px;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 0;
+  margin: 0 0 0 32px;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+}
+
+.links {
+  display: flex;
+
+  li {
+    margin: 0 16px 0 0;
+  }
+}

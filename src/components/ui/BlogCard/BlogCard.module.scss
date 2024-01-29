@@ -1,0 +1,31 @@
+@import '@/styles/colors.scss';
+
+.card {
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 318px;
+  margin: 0 0 32px 0;
+  object-fit: cover;
+}
+
+.caption {
+  color: $grey-500;
+}
+
+.author {
+  color: $purple;
+}
+
+.title {
+  margin: 16px 0;
+}
+
+.text {
+  color: rgba($black, 0.7);
+}

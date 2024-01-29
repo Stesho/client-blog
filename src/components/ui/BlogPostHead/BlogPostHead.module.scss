@@ -1,0 +1,41 @@
+@import '@/styles/colors.scss';
+
+.section {
+  max-width: 768px;
+  margin: 128px auto 64px auto;
+}
+
+.author {
+  display: flex;
+  margin: 0 0 24px 0;
+}
+
+.authorImg {
+  margin: 5px 16px 0 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.authorName {
+  color: $purple;
+}
+
+.postedDate {
+  display: block;
+  color: $grey-400;
+  line-height: 24px;
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  margin: 34px 0 0 0;
+
+  img {
+    width: 28px;
+    height: 28px;
+    margin: 0 8px 0 0;
+  }
+}

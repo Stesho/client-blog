@@ -1,0 +1,113 @@
+@import './colors';
+@import './vars';
+
+@mixin adaptive-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
+
+%heading {
+  color: $black;
+  font-family: var(--font-sen);
+  font-weight: 700;
+}
+
+%body {
+  font-family: var(--font-inter);
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  margin-bottom: 128px;
+}
+
+// Cap
+.cap {
+  font-family: var(--font-inter);
+  @include adaptive-font(16, 12);
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+// Heading
+.display {
+  @extend %heading;
+  @include adaptive-font(56, 38);
+  line-height: 64px;
+  letter-spacing: -2px;
+
+  @media (max-width: 425px) {
+    line-height: 42px;
+  }
+}
+
+.heading1 {
+  @extend %heading;
+  @include adaptive-font(48, 36);
+  line-height: 64px;
+  letter-spacing: -2px;
+}
+
+.heading2 {
+  @extend %heading;
+  @include adaptive-font(36, 27);
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+
+.heading3 {
+  @extend %heading;
+  @include adaptive-font(28, 21);
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+
+.heading4 {
+  @extend %heading;
+  @include adaptive-font(24, 18);
+  line-height: 32px;
+}
+
+.heading5 {
+  @extend %heading;
+  @include adaptive-font(20, 15);
+  line-height: 32px;
+}
+
+.heading6 {
+  @extend %heading;
+  @include adaptive-font(16, 12);
+  line-height: 24px;
+}
+
+// Body
+.body1 {
+  @extend %body;
+  @include adaptive-font(16, 12);
+  line-height: 28px;
+}
+
+.body2 {
+  @extend %body;
+  @include adaptive-font(14, 10);
+  line-height: 20px;
+}
+
+// Label
+.label {
+  font-family: var(--font-inter);
+  @include adaptive-font(14, 10);
+  font-weight: 500;
+  line-height: 20px;
+}

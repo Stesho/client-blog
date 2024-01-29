@@ -1,0 +1,50 @@
+@import '@/styles/colors.scss';
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+  animation: showUp 2000ms ease;
+}
+
+.image {
+  position: relative;
+  z-index: -1;
+
+  @media (max-width: 768px) {
+    visibility: hidden;
+    margin: -240px 0 0 0;
+  }
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  max-width: 706px;
+  padding: 80px;
+  left: 100%;
+  transform: translateX(-100%);
+  background-color: $white;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.header {
+  margin: 24px 0 16px 0;
+}
+
+.button {
+  margin: 32px 0 0 0;
+}

@@ -1,0 +1,44 @@
+@import '@/styles/colors.scss';
+
+.blogPostCard {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.image {
+  width: 490px;
+  height: 318px;
+  margin: 0 32px 0 0;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+}
+
+.content {
+  max-width: 624px;
+}
+
+.type {
+  color: $purple;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 20px 0 16px 0;
+}
+
+.text {
+  color: $grey-400;
+}

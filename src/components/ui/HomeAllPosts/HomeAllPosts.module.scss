@@ -1,0 +1,33 @@
+@import '@/styles/colors.scss';
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.section {
+  max-width: 517px;
+  animation: slideRight 1000ms ease;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 32px 0;
+  text-transform: capitalize;
+}
+
+.viewAll {
+  color: $purple;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba($purple, 0.7);
+  }
+}

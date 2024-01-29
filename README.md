@@ -1,6 +1,5 @@
 # Tестовое задание Modsen Client Blog
 
-
 ## Содержание
 
 - [Техническое задание](#Техническое-задание)
@@ -10,12 +9,10 @@
 - [Описание экранов](#Описание-экранов)
 - [Полезные ссылки](#Полезные-ссылки)
 
-
 ## Техническое задание
 
 Необходимо реализовать React приложение "Modsen Client Blog" по предоставленному дизайну из Figma
 с использование server-side rendering(NextJS).
-
 
 ## Используемые технологии
 
@@ -23,8 +20,8 @@
 - **_TS_** - инструмент строгой типизации;
 - **_email-js_** - библиотека позволяющая отправлять электронные письма на почту;
 - **_SCSS_** - препроцессор, позволяющий писать код для стилей CSS;
-- ***cypress*** — e2e тестирование для web-приложений;
-- ***jest*** — unit-тестирование;
+- **_cypress_** — e2e тестирование для web-приложений;
+- **_jest_** — unit-тестирование;
 - **_yup_** - библиотека для валидации форм;
 - **_nextJS_** - фреймворк на JavaScript, использующий React для построения server-side render.
 
@@ -38,18 +35,15 @@
 - просмотр интерактивной карты;
 - смены языка (продумать самостоятельно).
 
-
 ## Дополнительный функционал
 
 - Развернуть приложение на хостинге (heroku, vercel)
 - Настроить CI/CD, используя [GitHub Actions](https://github.com/features/actions).
 - Собрать проект с нуля(с настройками всех конфигов: eslint, prettier, husky)
 
-
 ### Пример графического представления:
 
-Ссылка на макет: [Макет "Modsen Client Blog"](<https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=0%3A1&t=FIUQOCF7mw0vjeF8-0>).
-
+Ссылка на макет: [Макет "Modsen Client Blog"](https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=0%3A1&t=FIUQOCF7mw0vjeF8-0).
 
 ### Также проект предполагает:
 
@@ -66,10 +60,9 @@
 - Обязательную анимацию при наведения, нажатии на кнопки, прокрутки карусели и слайдеров, появлении элементов на странице при рендере и скролле;
 - Творчество в контексте анимации, помимо обязательной выше, приветствуется.
 
-
 ## Описание экранов
 
-1. [Главная Home](<https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=2%3A509&t=5YoUOACNZ3dRVibl-0>).
+1. [Главная Home](https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=2%3A509&t=5YoUOACNZ3dRVibl-0).
 
 Все страницы включают в себя верхний блок, который предполагает реализацию перехода между страницами и при нажатии на кнопку "Video about us" открывается модальное окно, в котором сразу начинает проигрываться видео(выбранное выполняющим).
 На странице необходимо реализовать загрузку контента с помощью infinity scroll.
@@ -85,8 +78,7 @@
 На каждой странице в блоке "Subscribe to our news letter" должна быть реализована форма отправки сообщения на электронную почту выполняющего.
 При нажатии на ссылку "Privacy Policy", которая находится в футере, должна открываться страница Privacy Policy.
 
-
-2. [Главная Blog](<https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A738&t=5YoUOACNZ3dRVibl-0>).
+2. [Главная Blog](https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A738&t=5YoUOACNZ3dRVibl-0).
 
 В блоке "Step-by-step" при нажатии на кнопку "Read more" происходит переход на страницу поста, который представлен на [экране](https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog?node-id=2%3A323&t=mb2rG2iYAU6MVs3n-0)
 На странице расположен список постов с разными категориями. С помощью кнопок prev/next можно листать список постов.
@@ -94,20 +86,19 @@
 В блоке "All Categories" при нажатии на определенную категорию, пользователь попадает на страницу Category.
 В блоке "Join our team to be a part of our story" при нажатии на кнопку "Join Now" пользователь попадает на Contact.
 
-
-3. [Главная Blog Post](<https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A919&t=5YoUOACNZ3dRVibl-0>).
+3. [Главная Blog Post](https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A919&t=5YoUOACNZ3dRVibl-0).
 
 На данной странице помимо содержимого определенного поста, в блоке "What to read next" находится список с постами с той же категорией, что и основной пост на странице.
 В блоке "Join our team to be a part of our story" при нажатии на кнопку "Join Now" пользователь попадает на страницу Contact.
 В блоке "Subscribe to our news letter" должна быть реализована форма отправки сообщения на электронную почту пользователя.
 
-4. [Главная About Us](<https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A1045&t=5YoUOACNZ3dRVibl-0>).
+4. [Главная About Us](https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A1045&t=5YoUOACNZ3dRVibl-0).
 
 В блоке "List of Authors" находится список авторов, при нажатии на определенного автора, открывается страница с информацией о нём на странице About Us.
 Каждая из иконок социальных сетей является уникальной для каждого автора.
 В блоке "Join our team to be a part of our story" при нажатии на кнопку "Join Now" пользователь попадает на страницу Contact.
 
-5. [Главная Category](<https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A1304&t=5YoUOACNZ3dRVibl-0>).
+5. [Главная Category](https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A1304&t=5YoUOACNZ3dRVibl-0).
 
 На данной странице расположен список постов с той же категорией, которую первоначально выбрал пользователь на странице Blog.
 К каждому посту привязаны один и более тегов. В блоке "Search for tag..." можно найти посты с определенным тегом, который введет пользователь.
@@ -116,23 +107,19 @@
 Если же пользователь ввел определенный тег в "Search for tag...", то при выборе тега в "All tags" отображение постов тоже должно измениться.
 Если же никаких совпадений нет, то необходимо отображать альтернативный текст на странице пользователя.
 
-6. [Главная Author](<https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A1483&t=5YoUOACNZ3dRVibl-0>).
+6. [Главная Author](https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A1483&t=5YoUOACNZ3dRVibl-0).
 
 На данной странице отображается краткая информация об авторе и список его социальных сетей.
 В блоке "My Posts" отображается список его постов, если же они принадлежат автору.
 В случае отсутствия постов, которые принадлежат автору, если же постов нет, то должен отображаться альтернативный текст.
 При нажатии на один из постов, происходит переход на страницу Blog Post.
 
-7. [Главная Contact](<https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A1581&t=5YoUOACNZ3dRVibl-0>).
-
+7. [Главная Contact](https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A1581&t=5YoUOACNZ3dRVibl-0).
 
 Данная страница хранит в себе форму для связи, которая отправляется на почту (выбранную пользователем) с заранее заготовленным текстом.
 Карта является интерактивной, на которой отображаются точки (минимум 3) удаленные друг от друга (точки определяет выполняющий, но они должны быть расположены в разных странах).
 
-
-8. [Главная Privacy Policy](<https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A1678&t=5YoUOACNZ3dRVibl-0>).
-
-
+8. [Главная Privacy Policy](https://www.figma.com/file/fhmK69xjYdFpfoVhY7t6u1/Client-Blog-Modsen-Template?node-id=14%3A1678&t=5YoUOACNZ3dRVibl-0).
 
 ## Полезные ссылки
 
@@ -161,6 +148,3 @@
 [GitHub Actions](https://github.com/features/actions)
 
 [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
-
-
-

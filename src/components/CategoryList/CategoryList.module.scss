@@ -1,0 +1,69 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.postsList {
+  width: 100%;
+}
+
+.blogListItem {
+  margin: 0 0 32px 0;
+
+  img {
+    width: 294px;
+    height: 312px;
+  }
+}
+
+.notFound {
+  width: 100%;
+  margin: 200px 0 0 0;
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+}
+
+.controlBar {
+  max-width: 296px;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    margin: 0 0 100px 0;
+  }
+}
+
+.categoryList {
+  @media (max-width: 1024px) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.categoryTitle {
+  margin: 0 0 40px 0;
+}
+
+.categoryItem {
+  margin: 0 0 24px 0;
+
+  @media (max-width: 1024px) {
+    margin: 0;
+  }
+}
+
+.tagsTitle {
+  margin: 0 0 24px 0;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

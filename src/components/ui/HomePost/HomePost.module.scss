@@ -1,0 +1,24 @@
+@import '@/styles/colors.scss';
+
+.homePost {
+  padding: 32px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $grey-100;
+  }
+
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
+}
+
+.author {
+  display: block;
+  margin: 0 0 8px 0;
+  color: $grey-400;
+
+  & > span {
+    color: $purple;
+  }
+}

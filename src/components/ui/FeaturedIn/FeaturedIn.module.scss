@@ -1,0 +1,56 @@
+@import '@/styles/colors.scss';
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 96px;
+  margin-bottom: 96px;
+  animation: slideUp 1500ms ease;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 0;
+
+  @media (max-width: 425px) {
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.logoItem {
+  margin: 0 0 0 74px;
+
+  @media (max-width: 425px) {
+    margin: 0;
+  }
+}
+
+.caption {
+  color: rgba($grey-400, 0.6);
+}
+
+.title {
+  color: $grey-400;
+
+  @media (max-width: 425px) {
+    margin: 0 0 20px 0;
+  }
+}

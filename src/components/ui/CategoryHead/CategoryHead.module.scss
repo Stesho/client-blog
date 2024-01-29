@@ -1,0 +1,22 @@
+@import '@/styles/colors.scss';
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  background-color: $grey-200;
+}
+
+.wrapper {
+  max-width: 515px;
+  text-align: center;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.text {
+  margin: 16px 0 32px 0;
+}

@@ -1,0 +1,38 @@
+@import '@/styles/colors.scss';
+@import '@/styles/global.scss';
+
+.card {
+  max-width: 296px;
+  padding: 32px;
+  border: 1px solid rgba($grey-400, 0.3);
+  cursor: pointer;
+
+  &:hover {
+    background-color: $yellow-100;
+  }
+}
+
+.image {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: $grey-100;
+}
+
+.title {
+  margin: 16px 0 4px 0;
+  color: $black;
+  font-family: var(--font-sen);
+  @include adaptive-font(28, 22);
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+}
+
+.text {
+  color: $grey-400;
+  font-family: var(--font-inter);
+  @include adaptive-font(16, 14);
+  line-height: 28px;
+}
