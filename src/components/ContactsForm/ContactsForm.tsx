@@ -62,20 +62,28 @@ export const ContactsForm = () => {
         label='name'
         register={register}
         errorMessage={errors.name?.message}
+        inputDataTestid='nameInput'
+        errorMessageDataTestid='errorMessage'
       />
       <Input
         placeholder='Your Email'
         label='email'
         register={register}
         errorMessage={errors.email?.message}
+        inputDataTestid='emailInput'
+        errorMessageDataTestid='errorMessage'
       />
       <Textarea
         placeholder='Message'
         label='message'
         register={register}
         errorMessage={errors.message?.message}
+        inputDataTestid='messageInput'
+        errorMessageDataTestid='errorMessage'
       />
-      <Button type='submit'>Send Message</Button>
+      <Button type='submit' dataTestid='sendButton'>
+        Send Message
+      </Button>
     </form>
   );
 };

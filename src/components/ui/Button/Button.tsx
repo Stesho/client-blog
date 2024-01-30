@@ -9,16 +9,19 @@ interface ButtonProps {
   styleType?: ButtonTypes;
   className?: string;
   onClick?: () => void;
+  dataTestid?: string;
 }
 
 export const Button = ({
   children,
   className,
   onClick,
+  dataTestid,
   type = 'button',
   styleType = ButtonTypes.Primary,
 }: ButtonProps) => (
   <button
+    data-testid={dataTestid}
     onClick={onClick}
     type={type || 'button'}
     className={classNames(styles.button, className, styles[styleType])}

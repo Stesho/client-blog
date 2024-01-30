@@ -51,6 +51,7 @@ export const Testimonials = () => {
               className={styles.controller}
               onClick={prevSlide}
               disabled={step === 0}
+              data-testid='testimonialsPrevButton'
             >
               <span>←</span>
             </button>
@@ -59,6 +60,7 @@ export const Testimonials = () => {
               className={styles.controller}
               onClick={nextSlide}
               disabled={step === REVIEWS.length - 1}
+              data-testid='testimonialsNextButton'
             >
               <span>→</span>
             </button>

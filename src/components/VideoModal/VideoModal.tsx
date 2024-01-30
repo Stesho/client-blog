@@ -7,14 +7,15 @@ interface VideoModalProps {
 }
 
 export const VideoModal = ({ onClose }: VideoModalProps) => (
-    <Modal id='about-us-modal' onClose={onClose}>
-      <div className={styles.videoResponsive}>
-        <iframe
-          src="https://www.youtube.com/embed/zRp4NS_eeGc"
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowFullScreen
-          title='Embedded youtube'
-        />
-      </div>
-    </Modal>
-  );
+  <Modal id='about-us-modal' onClose={onClose}>
+    <div className={styles.videoResponsive}>
+      <iframe
+        data-testid='videoModal'
+        src='https://www.youtube.com/embed/zRp4NS_eeGc'
+        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+        allowFullScreen
+        title='Embedded youtube'
+      />
+    </div>
+  </Modal>
+);
