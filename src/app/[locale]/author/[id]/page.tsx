@@ -6,6 +6,8 @@ import { AUTHORS } from '@/constants/authors';
 import { getAuthorById } from '@/utils/getAuthorById';
 import { redirect } from 'next/navigation';
 import { ROUTES } from '@/constants/routes';
+import { unstable_setRequestLocale } from 'next-intl/server';
+import { PageParams } from '@/types/pageParams';
 
 export function generateStaticParams() {
   return AUTHORS.map((post) => ({
@@ -13,7 +15,12 @@ export function generateStaticParams() {
   }));
 }
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page({
+  params,
+}: {
+  params: PageParams & { id: string };
+}) {
+  unstable_setRequestLocale(params.locale);
   const author = getAuthorById(params.id);
   const authorPosts = getAuthorPosts(params.id);
 
