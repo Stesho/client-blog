@@ -8,6 +8,8 @@ import { PageParams } from '@/types/pageParams';
 import { Header } from '@/components/ui/Header/Header';
 import { Footer } from '@/components/ui/Footer/Footer';
 import { useTranslations } from 'next-intl';
+import { locales } from '@/i18n';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 const sen = Sen({
   subsets: ['latin'],
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return [{ lang: 'en-US' }, { lang: 'de' }];
+  return locales.map((locale) => ({ locale }));
 }
 
 export default function RootLayout({
@@ -37,6 +39,7 @@ export default function RootLayout({
   children: ReactNode;
   params: PageParams;
 }) {
+  unstable_setRequestLocale(params.locale);
   const t = useTranslations('header');
   const headerLinks = ['home', 'blog', 'about', 'contacts'].map((key) =>
     t(`nav.${key}`),

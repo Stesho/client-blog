@@ -8,6 +8,8 @@ import { getPostById } from '@/utils/getPostById';
 import { redirect } from 'next/navigation';
 import { ROUTES } from '@/constants/routes';
 import { getRecommendedPosts } from '@/utils/getRecommendedPosts';
+import { unstable_setRequestLocale } from 'next-intl/server';
+import { PageParams } from '@/types/pageParams';
 import styles from './page.module.scss';
 
 export function generateStaticParams() {
@@ -16,7 +18,12 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: { params: { id: string } }) {
+export default function BlogPost({
+  params,
+}: {
+  params: PageParams & { id: string };
+}) {
+  unstable_setRequestLocale(params.locale);
   const post = getPostById(params.id);
   const recommendedPosts = getRecommendedPosts(params.id, 3);
 
