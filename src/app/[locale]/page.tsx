@@ -11,8 +11,11 @@ import { Join } from '@/components/ui/Join/Join';
 import { InfiniteScroll } from '@/components/InfiniteScroll/InfiniteScroll';
 import { AUTHORS } from '@/constants/authors';
 import { POSTS } from '@/constants/posts';
+import { unstable_setRequestLocale } from 'next-intl/server';
+import { PageParams } from '@/types/pageParams';
 
-export default function Home() {
+export default function Home({ params }: { params: PageParams }) {
+  unstable_setRequestLocale(params.locale);
   return (
     <main>
       <HomeInfo post={POSTS[0]} />
