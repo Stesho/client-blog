@@ -2,8 +2,17 @@ import FacebookIcon from '@/assets/icons/facebook.svg';
 import TwitterIcon from '@/assets/icons/twitter.svg';
 import InstagramIcon from '@/assets/icons/instagram.svg';
 import LinkedinIcon from '@/assets/icons/linkedin.svg';
+import { ROUTES } from '@/constants/routes';
 
 export const FOOTER_LINKS = [
+  ROUTES.home,
+  ROUTES.blog,
+  ROUTES.about,
+  ROUTES.contacts,
+  ROUTES.privacyPolicy,
+];
+
+export const FOOTER_SOCIAL = [
   {
     iconURL: FacebookIcon,
     alt: 'facebook',

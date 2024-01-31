@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { VideoModal } from '@/components/VideoModal/VideoModal';
 import { useWindowSize } from '@/hooks/useWindowSize';
-import { NavBar } from '@/components/ui/Header/NavBar/NavBar';
+import { NavBar } from '@/components/Header/NavBar/NavBar';
 import styles from './Header.module.scss';
 
 export interface HeaderProps {

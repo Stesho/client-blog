@@ -5,4 +5,5 @@ export const ROUTES = {
   author: '/author',
   category: '/category',
   contacts: '/contacts',
+  privacyPolicy: '/privacypolicy',
 };

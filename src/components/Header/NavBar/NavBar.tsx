@@ -15,17 +15,17 @@ interface NavBarProps {
 }
 
 export const NavBar = ({ messages, openModal }: NavBarProps) => (
-    <nav className={styles.nav}>
-      <ul className={styles.list}>
-        {HEADER_LINKS.map((link, index) => (
-          <li key={link} className={styles.link}>
-            <Link href={link}>{messages.links[index]}</Link>
-          </li>
-        ))}
-      </ul>
-      <LangSelect />
-      <Button onClick={openModal} styleType={ButtonTypes.Secondary}>
-        {messages.button}
-      </Button>
-    </nav>
-  );
+  <nav className={styles.nav}>
+    <ul className={styles.list}>
+      {HEADER_LINKS.map((link, index) => (
+        <li key={link} className={styles.link}>
+          <Link href={link}>{messages.links[index]}</Link>
+        </li>
+      ))}
+    </ul>
+    <LangSelect />
+    <Button onClick={openModal} styleType={ButtonTypes.Secondary}>
+      {messages.button}
+    </Button>
+  </nav>
+);

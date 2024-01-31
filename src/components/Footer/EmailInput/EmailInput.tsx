@@ -62,8 +62,11 @@ export const EmailInput = () => {
         className={styles.input}
         placeholder='Enter Your Email'
         errorMessage={errors.email?.message}
+        inputDataTestid='emailInput'
       />
-      <Button type='submit'>Subscribe</Button>
+      <Button type='submit' dataTestid='subscribeButton'>
+        Subscribe
+      </Button>
     </form>
   );
 };
