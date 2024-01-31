@@ -1,6 +1,8 @@
 import React from 'react';
-import { Post } from '@/types/post';
+
 import { BlogPostCard } from '@/components/ui/BlogPostCard/BlogPostCard';
+import { Post } from '@/types/post';
+
 import styles from './AuthorPosts.module.scss';
 
 interface AuthorPostsProps {

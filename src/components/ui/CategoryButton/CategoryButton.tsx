@@ -1,5 +1,6 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
+
 import styles from './CategoryButton.module.scss';
 
 interface CategoryButtonProps {
@@ -20,7 +21,7 @@ export const CategoryButton = ({
   <div>
     <input
       id={`${id}category`}
-      name="category"
+      name='category'
       className={styles.input}
       type='radio'
       checked={isChecked}

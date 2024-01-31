@@ -1,12 +1,14 @@
 'use client';
 
 import React, { ChangeEvent, useTransition } from 'react';
-import { locales } from '@/i18n';
-import { LANGS } from '@/constants/langs';
-import { useRouter, usePathname } from 'next/navigation';
-import { Locale } from '@/types/lang';
+import { usePathname, useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
+
+import { LANGS } from '@/constants/langs';
+import { locales } from '@/i18n';
+import { Locale } from '@/types/lang';
 import { getUpdatedPathname } from '@/utils/getUpdatedPathname';
+
 import styles from './LangSelect.module.scss';
 
 export const LangSelect = () => {

@@ -1,7 +1,9 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/navigation';
+
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
+
 import styles from './OurMission.module.scss';
 
 export const OurMission = () => {

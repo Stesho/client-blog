@@ -1,9 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 import classNames from 'classnames';
-import { Link } from '@/navigation';
+import Image from 'next/image';
+
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
 import { Post } from '@/types/post';
+
 import styles from './BlogPostCard.module.scss';
 
 interface BlogPostCardProps {

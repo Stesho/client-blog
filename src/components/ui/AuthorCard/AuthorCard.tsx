@@ -1,6 +1,8 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
+
 import { FOOTER_SOCIAL } from '@/constants/footer';
+
 import styles from './AuthorCard.module.scss';
 
 interface AuthorCardProps {

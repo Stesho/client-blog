@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
-import { ButtonTypes } from '@/types/buttons';
 import classNames from 'classnames';
+
+import { ButtonTypes } from '@/types/buttons';
+
 import styles from './Button.module.scss';
 
 interface ButtonProps {

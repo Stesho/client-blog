@@ -1,18 +1,20 @@
 'use client';
 
 import React from 'react';
-import { Input } from '@/components/ui/Input/Input';
-import { Button } from '@/components/ui/Button/Button';
 import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { emailFormSchema } from '@/constants/validationSchemas';
-import { EmailFormData } from '@/types/forms';
 import emailjs from '@emailjs/browser';
+import { yupResolver } from '@hookform/resolvers/yup';
+
+import { Button } from '@/components/ui/Button/Button';
+import { Input } from '@/components/ui/Input/Input';
 import {
   EMAIL_PUBLIC_KEY,
   EMAIL_SERVICE_ID,
   EMAIL_TEMPLATE_ID,
 } from '@/constants/environment';
+import { emailFormSchema } from '@/constants/validationSchemas';
+import { EmailFormData } from '@/types/forms';
+
 import styles from './EmailInput.module.scss';
 
 interface EmailInputProps {

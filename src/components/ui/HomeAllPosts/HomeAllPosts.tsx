@@ -1,9 +1,11 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { POSTS } from '@/constants/posts';
+
 import { HomePost } from '@/components/ui/HomePost/HomePost';
-import { Link } from '@/navigation';
+import { POSTS } from '@/constants/posts';
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
+
 import styles from './HomeAllPosts.module.scss';
 
 export const HomeAllPosts = () => {

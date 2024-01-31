@@ -1,10 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import { Button } from '@/components/ui/Button/Button';
-import BgImage from '@/assets/img/home/close-up-photography.jpg';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/navigation';
+
+import BgImage from '@/assets/img/home/close-up-photography.jpg';
+import { Button } from '@/components/ui/Button/Button';
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
+
 import styles from './WhyWeStarted.module.scss';
 
 export const WhyWeStarted = () => {

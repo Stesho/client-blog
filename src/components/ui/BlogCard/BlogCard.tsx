@@ -1,5 +1,6 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
+
 import styles from './BlogCard.module.scss';
 
 export interface BlogCardProps {

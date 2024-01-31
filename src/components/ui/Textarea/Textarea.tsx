@@ -1,7 +1,9 @@
 import React from 'react';
-import classNames from 'classnames';
-import { InputTypes } from '@/types/inputs';
 import { FieldValues, Path, UseFormRegister } from 'react-hook-form';
+import classNames from 'classnames';
+
+import { InputTypes } from '@/types/inputs';
+
 import styles from './Textarea.module.scss';
 
 interface TextareaProps<T extends FieldValues> {

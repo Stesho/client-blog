@@ -1,8 +1,10 @@
 import React from 'react';
-import '@testing-library/jest-dom';
-import { fireEvent, render } from '@testing-library/react';
-import { ContactsForm } from '@/components/ContactsForm/ContactsForm';
 import emailjs from '@emailjs/browser';
+import { fireEvent, render } from '@testing-library/react';
+
+import { ContactsForm } from '@/components/ContactsForm/ContactsForm';
+
+import '@testing-library/jest-dom';
 
 jest.mock('@emailjs/browser', () => ({
   send: jest.fn(() =>

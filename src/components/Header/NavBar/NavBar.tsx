@@ -1,12 +1,14 @@
 import React from 'react';
-import { HEADER_LINKS } from '@/constants/headerLinks';
-import { LangSelect } from '@/components/ui/LangSelect/LangSelect';
-import { Button } from '@/components/ui/Button/Button';
-import { ButtonTypes } from '@/types/buttons';
-import { Link } from '@/navigation';
-import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
+import { usePathname } from 'next/navigation';
+
+import { Button } from '@/components/ui/Button/Button';
+import { LangSelect } from '@/components/ui/LangSelect/LangSelect';
+import { HEADER_LINKS } from '@/constants/headerLinks';
+import { Link } from '@/navigation';
+import { ButtonTypes } from '@/types/buttons';
 import { isActiveLink } from '@/utils/isActiveLink';
+
 import styles from './NavBar.module.scss';
 
 interface NavBarProps {

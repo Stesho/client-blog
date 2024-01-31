@@ -2,10 +2,11 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from '@emailjs/browser';
-import { Input } from '@/components/ui/Input/Input';
+import { yupResolver } from '@hookform/resolvers/yup';
+
 import { Button } from '@/components/ui/Button/Button';
+import { Input } from '@/components/ui/Input/Input';
 import { Textarea } from '@/components/ui/Textarea/Textarea';
 import {
   EMAIL_PUBLIC_KEY,
@@ -14,6 +15,7 @@ import {
 } from '@/constants/environment';
 import { contactsFormSchema } from '@/constants/validationSchemas';
 import { ContactsFormData } from '@/types/forms';
+
 import styles from './ContactsForm.module.scss';
 
 export const ContactsForm = () => {

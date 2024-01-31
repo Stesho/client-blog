@@ -1,7 +1,9 @@
 import React from 'react';
-import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/react';
+
 import { VideoModal } from '@/components/VideoModal/VideoModal';
+
+import '@testing-library/jest-dom';
 
 describe('VideoModal', () => {
   it('should correctly render component', () => {

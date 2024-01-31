@@ -1,7 +1,8 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react';
-import { EmailInput } from '@/components/Footer/EmailInput/EmailInput';
 import emailjs from '@emailjs/browser';
+import { fireEvent, render } from '@testing-library/react';
+
+import { EmailInput } from '@/components/Footer/EmailInput/EmailInput';
 
 jest.mock('@emailjs/browser', () => ({
   send: jest.fn(() =>

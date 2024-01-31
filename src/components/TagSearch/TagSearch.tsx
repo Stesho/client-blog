@@ -1,8 +1,10 @@
 import React, { ChangeEvent, useDeferredValue, useState } from 'react';
+
 import { Button } from '@/components/ui/Button/Button';
-import { Link } from '@/navigation';
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
 import { Post } from '@/types/post';
+
 import styles from './TagSearch.module.scss';
 
 interface TagSearchProps {

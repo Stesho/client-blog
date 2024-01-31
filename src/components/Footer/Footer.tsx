@@ -1,13 +1,15 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import { FOOTER_LINKS, FOOTER_SOCIAL } from '@/constants/footer';
-import { EmailInput } from '@/components/Footer/EmailInput/EmailInput';
-import { Link } from '@/navigation';
 import classNames from 'classnames';
-import { isActiveLink } from '@/utils/isActiveLink';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+
+import { EmailInput } from '@/components/Footer/EmailInput/EmailInput';
+import { FOOTER_LINKS, FOOTER_SOCIAL } from '@/constants/footer';
+import { Link } from '@/navigation';
+import { isActiveLink } from '@/utils/isActiveLink';
+
 import styles from './Footer.module.scss';
 
 export interface FooterProps {

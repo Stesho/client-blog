@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { Modal } from '@/components/ui/Modal/Modal';
+
 import styles from './VideoModal.module.scss';
 
 interface VideoModalProps {

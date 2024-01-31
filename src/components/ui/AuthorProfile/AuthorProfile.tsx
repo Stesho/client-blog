@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+
 import { FOOTER_SOCIAL } from '@/constants/footer';
 import { Author } from '@/types/author';
+
 import styles from './AuthorProfile.module.scss';
 
 interface AuthorProfileProps {

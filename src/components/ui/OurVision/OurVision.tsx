@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from '@/components/ui/OurMission/OurMission.module.scss';
 import { useTranslations } from 'next-intl';
+
+import styles from '@/components/ui/OurMission/OurMission.module.scss';
 
 export const OurVision = () => {
   const t = useTranslations();

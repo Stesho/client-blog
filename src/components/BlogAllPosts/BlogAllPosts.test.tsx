@@ -1,7 +1,9 @@
 import React from 'react';
-import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/react';
+
 import { BlogAllPosts } from '@/components/BlogAllPosts/BlogAllPosts';
+
+import '@testing-library/jest-dom';
 
 describe('BlogAllPosts', () => {
   it('should correctly render component', () => {

@@ -1,15 +1,16 @@
-import '@/styles/reset.scss';
-import '@/styles/global.scss';
-
 import React, { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter, Sen } from 'next/font/google';
-import { PageParams } from '@/types/pageParams';
-import { Header } from '@/components/Header/Header';
-import { Footer } from '@/components/Footer/Footer';
 import { useTranslations } from 'next-intl';
-import { locales } from '@/i18n';
 import { unstable_setRequestLocale } from 'next-intl/server';
+
+import { Footer } from '@/components/Footer/Footer';
+import { Header } from '@/components/Header/Header';
+import { locales } from '@/i18n';
+import { PageParams } from '@/types/pageParams';
+
+import '@/styles/reset.scss';
+import '@/styles/global.scss';
 
 const sen = Sen({
   subsets: ['latin'],

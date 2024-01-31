@@ -1,8 +1,10 @@
 import React from 'react';
-import { Button } from '@/components/ui/Button/Button';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/navigation';
+
+import { Button } from '@/components/ui/Button/Button';
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
+
 import styles from './Join.module.scss';
 
 export const Join = () => {
