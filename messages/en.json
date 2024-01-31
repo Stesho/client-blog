@@ -9,6 +9,7 @@
     "button": "Video about us"
   },
   "home": {
+    "readMore": "Read More",
     "featuredPost": {
       "title": "Featured Post"
     },
@@ -50,22 +51,98 @@
       "button": "Join now"
     }
   },
+  "categories": {
+    "notFound": "Selected posts not found",
+    "search": {
+      "input": "Search For Tag",
+      "button": "Search"
+    },
+    "categories": {
+      "title": "Categories"
+    },
+    "tags": {
+      "title": "All tags"
+    }
+  },
   "about": {
+    "head": {
+      "caption": "About us",
+      "title": "We are a team of content writers who share their learnings",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "statistic": {
+      "published": "Blogs Published",
+      "views": "Views on Finsweet",
+      "total": "Total active Users"
+    },
     "vision": {
       "caption": "Our Vision",
       "title": "A platform that empowers individuals to improve",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "creatives": {
+      "title": "Our team of creatives",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+    },
+    "whyWeStarted": {
+      "title": "Why we started this Blog",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+    }
+  },
+  "blog": {
+    "head": {
+      "caption": "Featured post",
+      "button": "Read more"
+    },
+    "allPosts": {
+      "title": "All posts",
+      "prevButton": "Prev",
+      "nextButton": "Next"
+    },
+    "post": {
+      "whatToRead": "What ro read next"
+    }
+  },
+  "contacts": {
+    "head": {
+      "caption": "Contact us",
+      "title": "Let’s Start a Conversation",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.\n\nWorking hours\nMonday To Friday\n9:00 AM to 8:00 PM\nOur Support Team is available 24/7\nContact Us"
+    },
+    "workingHours": {
+      "title": "Working hours",
+      "days": "Monday To Friday",
+      "hours": "9:00 AM to 8:00 PM",
+      "caption": "Our Support Team is available 24/7"
+    },
+    "contacts": {
+      "title": "Contact Us",
+      "phoneNumber": "020 7993 2905",
+      "email": "hello@finsweet.com"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
     }
   },
   "footer": {
     "text": "Subscribe to our news letter to get latest updates and news",
+    "input": "Enter Your Email",
+    "button": "Subscribe",
     "nav": {
       "home": "Home",
       "blog": "Blog",
       "about": "About us",
       "contacts": "Contact us",
       "privacyPolicy": "Privacy Policy"
-    },
-    "button": "Subscribe"
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated on 27th January 2022"
   }
 }

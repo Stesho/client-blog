@@ -9,6 +9,7 @@
     "button": "Видео о нас"
   },
   "home": {
+    "readMore": "Читать",
     "featuredPost": {
       "title": "Избранный пост"
     },
@@ -50,22 +51,98 @@
       "button": "Присоединиться сейчас"
     }
   },
+  "categories": {
+    "notFound": "Выбранные посты не найдены",
+    "search": {
+      "input": "Поиск по тегу",
+      "button": "Поиск"
+    },
+    "categories": {
+      "title": "Категории"
+    },
+    "tags": {
+      "title": "Все теги"
+    }
+  },
   "about": {
+    "head": {
+      "caption": "О нас",
+      "title": "Мы - команда авторов, которые делятся своими наработками",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "statistic": {
+      "published": "Постов опубликовано",
+      "views": "Просмотров на Finsweet",
+      "total": "Всего активных пользователей"
+    },
     "vision": {
       "caption": "Наша миссия",
       "title": "Создание ценного контента для творческих людей по всему миру",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "creatives": {
+      "title": "Наша команда креативщиков",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+    },
+    "whyWeStarted": {
+      "title": "Почему мы начали этот Блог",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+    }
+  },
+  "blog": {
+    "head": {
+      "caption": "Избранный пост",
+      "button": "Читать"
+    },
+    "allPosts": {
+      "title": "Все поcты",
+      "prevButton": "Назад",
+      "nextButton": "Далее"
+    },
+    "post": {
+      "whatToRead": "Что еще почитать"
+    }
+  },
+  "contacts": {
+    "head": {
+      "caption": "Контакты",
+      "title": "Давайте поговорим",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.\n\nWorking hours\nMonday To Friday\n9:00 AM to 8:00 PM\nOur Support Team is available 24/7\nContact Us"
+    },
+    "workingHours": {
+      "title": "Рабочие часы",
+      "days": "С Понедельника по Пятницу",
+      "hours": "9:00 AM to 8:00 PM",
+      "caption": "Наша служба поддержки доступна 24/7"
+    },
+    "contacts": {
+      "title": "Контакты",
+      "phoneNumber": "020 7993 2905",
+      "email": "hello@finsweet.com"
+    },
+    "form": {
+      "name": "ФИО",
+      "email": "Почта",
+      "message": "Сообщение",
+      "send": "Отправить сообщение"
     }
   },
   "footer": {
     "text": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
+    "input": "Введите вашу почту",
+    "button": "Подписаться",
     "nav": {
       "home": "Главная",
       "blog": "Блог",
       "about": "О нас",
       "contacts": "Контакты",
       "privacyPolicy": "Политика конфиденциальности"
-    },
-    "button": "Подписаться"
+    }
+  },
+  "privacyPolicy": {
+    "title": "Политика Конфиденциальности",
+    "lastUpdated": "Последнее обновление 27-го января 2022г."
   }
 }

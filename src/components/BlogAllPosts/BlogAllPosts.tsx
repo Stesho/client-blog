@@ -7,7 +7,15 @@ import { POSTS } from '@/constants/posts';
 
 import styles from './BlogAllPosts.module.scss';
 
-export const BlogAllPosts = () => {
+interface BlogAllPostsProps {
+  messages: {
+    title: string;
+    prevButton: string;
+    nextButton: string;
+  };
+}
+
+export const BlogAllPosts = ({ messages }: BlogAllPostsProps) => {
   const [page, setPage] = useState(0);
   const displayItemsCount = 5;
 
@@ -20,7 +28,7 @@ export const BlogAllPosts = () => {
 
   return (
     <section className='section container'>
-      <h2 className={`${styles.header} heading1`}>All posts</h2>
+      <h2 className={`${styles.header} heading1`}>{messages.title}</h2>
       <ul className={styles.list}>
         {POSTS.slice(
           page * displayItemsCount,
@@ -43,7 +51,7 @@ export const BlogAllPosts = () => {
           className={`${styles.controller} heading3`}
           data-testid='prevButton'
         >
-          {'<'} Prev
+          {'<'} {messages.prevButton}
         </button>
         <button
           disabled={isNextDisabled()}
@@ -52,7 +60,7 @@ export const BlogAllPosts = () => {
           className={`${styles.controller} heading3`}
           data-testid='nextButton'
         >
-          Next {'>'}
+          {messages.nextButton} {'>'}
         </button>
       </div>
     </section>

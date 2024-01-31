@@ -19,11 +19,25 @@ import styles from './CategoryList.module.scss';
 interface CategoryListProps {
   selectedCategory: string;
   posts: Post[];
+  messages: {
+    notFound: string;
+    search: {
+      input: string;
+      button: string;
+    };
+    categories: {
+      title: string;
+    };
+    tags: {
+      title: string;
+    };
+  };
 }
 
 export const CategoryList = ({
   selectedCategory,
   posts,
+  messages,
 }: CategoryListProps) => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
@@ -48,7 +62,7 @@ export const CategoryList = ({
     <section className={`${styles.section} section container`}>
       <ul className={styles.postsList}>
         {filteredPosts.length === 0 ? (
-          <div className={styles.notFound}>Selected posts not found</div>
+          <div className={styles.notFound}>{messages.notFound}</div>
         ) : (
           filteredPosts.map((post) => (
             <li
@@ -63,9 +77,17 @@ export const CategoryList = ({
         )}
       </ul>
       <div className={styles.controlBar}>
-        <TagSearch posts={POSTS} />
+        <TagSearch
+          posts={POSTS}
+          messages={{
+            input: messages.search.input,
+            button: messages.search.button,
+          }}
+        />
         <div>
-          <h3 className={`${styles.categoryTitle} heading2`}>Categories</h3>
+          <h3 className={`${styles.categoryTitle} heading2`}>
+            {messages.categories.title}
+          </h3>
           <ul className={styles.categoryList}>
             {CATEGORIES.map((category) => (
               <li key={category.id} className={styles.categoryItem}>
@@ -87,7 +109,9 @@ export const CategoryList = ({
           </ul>
         </div>
         <div>
-          <h3 className={`${styles.tagsTitle} heading2`}>All Tags</h3>
+          <h3 className={`${styles.tagsTitle} heading2`}>
+            {messages.tags.title}
+          </h3>
           <ul className={styles.tagList}>
             {TAGS.map((tag) => (
               <li key={tag}>

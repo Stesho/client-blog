@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { BlogAllPosts } from '@/components/BlogAllPosts/BlogAllPosts';
@@ -9,10 +10,18 @@ import { PageParams } from '@/types/pageParams';
 
 export default function BlogPage({ params }: { params: PageParams }) {
   unstable_setRequestLocale(params.locale);
+  const t = useTranslations('blog');
+
   return (
     <main>
       <BlogHead />
-      <BlogAllPosts />
+      <BlogAllPosts
+        messages={{
+          title: t('allPosts.title'),
+          prevButton: t('allPosts.prevButton'),
+          nextButton: t('allPosts.nextButton'),
+        }}
+      />
       <Categories />
       <Join />
     </main>

@@ -9,9 +9,13 @@ import styles from './TagSearch.module.scss';
 
 interface TagSearchProps {
   posts: Post[];
+  messages: {
+    input: string;
+    button: string;
+  };
 }
 
-export const TagSearch = ({ posts }: TagSearchProps) => {
+export const TagSearch = ({ posts, messages }: TagSearchProps) => {
   const [searchValue, setSearchValue] = useState('');
   const search = useDeferredValue(searchValue);
 
@@ -25,10 +29,10 @@ export const TagSearch = ({ posts }: TagSearchProps) => {
         value={search}
         onChange={onInputSearch}
         className={styles.searchInput}
-        placeholder='Search for tag...'
+        placeholder={`${messages.input}...`}
         data-testid='tagSearchInput'
       />
-      <Button>Search</Button>
+      <Button>{messages.button}</Button>
       {search !== '' && (
         <ul className={styles.postsList}>
           {posts

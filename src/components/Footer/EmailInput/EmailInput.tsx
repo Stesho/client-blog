@@ -20,6 +20,7 @@ import styles from './EmailInput.module.scss';
 interface EmailInputProps {
   messages: {
     button: string;
+    input: string;
   };
 }
 
@@ -68,7 +69,7 @@ export const EmailInput = ({ messages }: EmailInputProps) => {
         label='email'
         register={register}
         className={styles.input}
-        placeholder='Enter Your Email'
+        placeholder={messages.input}
         errorMessage={errors.email?.message}
         inputDataTestid='emailInput'
         inputDataCy='emailInput'

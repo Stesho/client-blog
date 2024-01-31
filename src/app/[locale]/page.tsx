@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { InfiniteScroll } from '@/components/InfiniteScroll/InfiniteScroll';
@@ -17,6 +18,8 @@ import { PageParams } from '@/types/pageParams';
 
 export default function Home({ params }: { params: PageParams }) {
   unstable_setRequestLocale(params.locale);
+  const t = useTranslations('home.testimonials');
+
   return (
     <main>
       <HomeInfo post={POSTS[0]} />
@@ -27,7 +30,13 @@ export default function Home({ params }: { params: PageParams }) {
         <WhyWeStarted />
         <AuthorsList authors={AUTHORS.slice(0, 4)} />
         <FeaturedIn />
-        <Testimonials />
+        <Testimonials
+          messages={{
+            caption: t('caption'),
+            title: t('title'),
+            text: t('text'),
+          }}
+        />
         <Join />
       </InfiniteScroll>
     </main>

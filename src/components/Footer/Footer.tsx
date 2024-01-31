@@ -17,6 +17,7 @@ export interface FooterProps {
     links: string[];
     text: string;
     button: string;
+    input: string;
   };
 }
 
@@ -48,6 +49,7 @@ export const Footer = ({ messages }: FooterProps) => {
           <EmailInput
             messages={{
               button: messages.button,
+              input: messages.input,
             }}
           />
         </div>

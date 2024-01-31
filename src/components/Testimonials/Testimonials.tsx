@@ -7,7 +7,15 @@ import { REVIEWS } from '@/constants/reviews';
 
 import styles from './Testimonials.module.scss';
 
-export const Testimonials = () => {
+interface TestimonialsProps {
+  messages: {
+    title: string;
+    caption: string;
+    text: string;
+  };
+}
+
+export const Testimonials = ({ messages }: TestimonialsProps) => {
   const [step, setStep] = useState(0);
 
   const prevSlide = () => setStep((prev) => prev - 1);
@@ -20,12 +28,9 @@ export const Testimonials = () => {
     >
       <div className={styles.wrapper}>
         <div className={styles.text}>
-          <span className='cap'>Testimonials</span>
-          <h3 className='heading3'>What people say about our blog</h3>
-          <p className='body1'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
-          </p>
+          <span className='cap'>{messages.caption}</span>
+          <h3 className='heading3'>{messages.title}</h3>
+          <p className='body1'>{messages.text}</p>
         </div>
         <div className={styles.carousel}>
           <div className={styles.line}>

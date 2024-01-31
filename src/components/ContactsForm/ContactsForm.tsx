@@ -18,7 +18,16 @@ import { ContactsFormData } from '@/types/forms';
 
 import styles from './ContactsForm.module.scss';
 
-export const ContactsForm = () => {
+interface ContactsFormProps {
+  messages: {
+    name: string;
+    email: string;
+    message: string;
+    send: string;
+  };
+}
+
+export const ContactsForm = ({ messages }: ContactsFormProps) => {
   const {
     register,
     handleSubmit,
@@ -61,7 +70,7 @@ export const ContactsForm = () => {
       data-cy='contactsForm'
     >
       <Input
-        placeholder='Full name'
+        placeholder={messages.name}
         label='name'
         register={register}
         errorMessage={errors.name?.message}
@@ -70,7 +79,7 @@ export const ContactsForm = () => {
         errorMessageDataCy='contactsNameInputError'
       />
       <Input
-        placeholder='Your Email'
+        placeholder={messages.email}
         label='email'
         register={register}
         errorMessage={errors.email?.message}
@@ -79,7 +88,7 @@ export const ContactsForm = () => {
         errorMessageDataCy='contactsEmailInputError'
       />
       <Textarea
-        placeholder='Message'
+        placeholder={messages.message}
         label='message'
         register={register}
         errorMessage={errors.message?.message}
@@ -88,7 +97,7 @@ export const ContactsForm = () => {
         errorMessageDataCy='contactsMessageInputError'
       />
       <Button type='submit' dataTestid='sendButton' dataCy='sendButton'>
-        Send Message
+        {messages.send}
       </Button>
     </form>
   );
