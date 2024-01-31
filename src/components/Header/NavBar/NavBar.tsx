@@ -4,6 +4,9 @@ import { LangSelect } from '@/components/ui/LangSelect/LangSelect';
 import { Button } from '@/components/ui/Button/Button';
 import { ButtonTypes } from '@/types/buttons';
 import { Link } from '@/navigation';
+import { usePathname } from 'next/navigation';
+import classNames from 'classnames';
+import { isActiveLink } from '@/utils/isActiveLink';
 import styles from './NavBar.module.scss';
 
 interface NavBarProps {
@@ -14,18 +17,27 @@ interface NavBarProps {
   openModal: () => void;
 }
 
-export const NavBar = ({ messages, openModal }: NavBarProps) => (
-  <nav className={styles.nav}>
-    <ul className={styles.list}>
-      {HEADER_LINKS.map((link, index) => (
-        <li key={link} className={styles.link}>
-          <Link href={link}>{messages.links[index]}</Link>
-        </li>
-      ))}
-    </ul>
-    <LangSelect />
-    <Button onClick={openModal} styleType={ButtonTypes.Secondary}>
-      {messages.button}
-    </Button>
-  </nav>
-);
+export const NavBar = ({ messages, openModal }: NavBarProps) => {
+  const pathname = usePathname();
+
+  return (
+    <nav className={styles.nav}>
+      <ul className={styles.list}>
+        {HEADER_LINKS.map((link, index) => (
+          <li
+            key={link}
+            className={classNames(styles.link, {
+              [styles.active]: isActiveLink(pathname, link),
+            })}
+          >
+            <Link href={link}>{messages.links[index]}</Link>
+          </li>
+        ))}
+      </ul>
+      <LangSelect />
+      <Button onClick={openModal} styleType={ButtonTypes.Secondary}>
+        {messages.button}
+      </Button>
+    </nav>
+  );
+};

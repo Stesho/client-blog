@@ -40,22 +40,36 @@ export default function RootLayout({
   params: PageParams;
 }) {
   unstable_setRequestLocale(params.locale);
-  const t = useTranslations('header');
-  const headerLinks = ['home', 'blog', 'about', 'contacts'].map((key) =>
-    t(`nav.${key}`),
+  const tFooter = useTranslations('footer');
+  const tHeader = useTranslations('header');
+  const headerMessages = ['home', 'blog', 'about', 'contacts'].map((key) =>
+    tHeader(`nav.${key}`),
   );
+  const footerMessages = [
+    'home',
+    'blog',
+    'about',
+    'contacts',
+    'privacyPolicy',
+  ].map((message) => tFooter(`nav.${message}`));
 
   return (
     <html lang={params.locale}>
       <body className={`${inter.className} ${sen.className}`}>
         <Header
           messages={{
-            links: headerLinks,
-            button: t('button'),
+            links: headerMessages,
+            button: tHeader('button'),
           }}
         />
         {children}
-        <Footer />
+        <Footer
+          messages={{
+            links: footerMessages,
+            text: tFooter('text'),
+            button: tFooter('button'),
+          }}
+        />
       </body>
     </html>
   );

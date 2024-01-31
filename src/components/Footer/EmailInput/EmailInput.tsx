@@ -15,7 +15,13 @@ import {
 } from '@/constants/environment';
 import styles from './EmailInput.module.scss';
 
-export const EmailInput = () => {
+interface EmailInputProps {
+  messages: {
+    button: string;
+  };
+}
+
+export const EmailInput = ({ messages }: EmailInputProps) => {
   const {
     register,
     handleSubmit,
@@ -65,7 +71,7 @@ export const EmailInput = () => {
         inputDataTestid='emailInput'
       />
       <Button type='submit' dataTestid='subscribeButton'>
-        Subscribe
+        {messages.button}
       </Button>
     </form>
   );

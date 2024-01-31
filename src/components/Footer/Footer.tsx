@@ -1,16 +1,25 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import { FOOTER_LINKS, FOOTER_SOCIAL } from '@/constants/footer';
 import { EmailInput } from '@/components/Footer/EmailInput/EmailInput';
 import { Link } from '@/navigation';
+import classNames from 'classnames';
+import { isActiveLink } from '@/utils/isActiveLink';
+import { usePathname } from 'next/navigation';
 import styles from './Footer.module.scss';
 
-export const Footer = () => {
-  const t = useTranslations('footer');
-  const messages = ['home', 'blog', 'about', 'contacts', 'privacyPolicy'].map(
-    (message) => t(`nav.${message}`),
-  );
+export interface FooterProps {
+  messages: {
+    links: string[];
+    text: string;
+    button: string;
+  };
+}
+
+export const Footer = ({ messages }: FooterProps) => {
+  const pathname = usePathname();
 
   return (
     <footer className={styles.footer}>
@@ -20,16 +29,25 @@ export const Footer = () => {
           <nav className={styles.nav}>
             <ul className={styles.list}>
               {FOOTER_LINKS.map((link, index) => (
-                <li className={styles.link}>
-                  <Link href={link}>{messages[index]}</Link>
+                <li
+                  key={link}
+                  className={classNames(styles.link, {
+                    [styles.active]: isActiveLink(pathname, link),
+                  })}
+                >
+                  <Link href={link}>{messages.links[index]}</Link>
                 </li>
               ))}
             </ul>
           </nav>
         </div>
         <div className={styles.content}>
-          <p className={`${styles.text} heading2`}>{t('text')}</p>
-          <EmailInput />
+          <p className={`${styles.text} heading2`}>{messages.text}</p>
+          <EmailInput
+            messages={{
+              button: messages.button,
+            }}
+          />
         </div>
         <div className={styles.social}>
           <div>
