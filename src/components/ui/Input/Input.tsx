@@ -17,7 +17,9 @@ interface InputProps<T extends FieldValues> {
   register: UseFormRegister<T>;
   errorMessage?: string;
   inputDataTestid?: string;
+  inputDataCy?: string;
   errorMessageDataTestid?: string;
+  errorMessageDataCy?: string;
 }
 
 export const Input = <T extends FieldValues>({
@@ -27,7 +29,9 @@ export const Input = <T extends FieldValues>({
   placeholder,
   className,
   inputDataTestid,
+  inputDataCy,
   errorMessageDataTestid,
+  errorMessageDataCy,
   type = 'text',
   styleType = InputTypes.Primary,
 }: InputProps<T>) => (
@@ -40,9 +44,14 @@ export const Input = <T extends FieldValues>({
         [styles.error]: !!errorMessage,
       })}
       data-testid={inputDataTestid}
+      data-cy={inputDataCy}
     />
     {!!errorMessage && (
-      <div className={styles.errorMessage} data-testid={errorMessageDataTestid}>
+      <div
+        className={styles.errorMessage}
+        data-testid={errorMessageDataTestid}
+        data-cy={errorMessageDataCy}
+      >
         {errorMessage}
       </div>
     )}

@@ -58,6 +58,7 @@ export const ContactsForm = () => {
     <form
       className={`${styles.form} container`}
       onSubmit={handleSubmit(sendEmail)}
+      data-cy='contactsForm'
     >
       <Input
         placeholder='Full name'
@@ -65,7 +66,8 @@ export const ContactsForm = () => {
         register={register}
         errorMessage={errors.name?.message}
         inputDataTestid='nameInput'
-        errorMessageDataTestid='errorMessage'
+        inputDataCy='contactsNameInput'
+        errorMessageDataCy='contactsNameInputError'
       />
       <Input
         placeholder='Your Email'
@@ -73,7 +75,8 @@ export const ContactsForm = () => {
         register={register}
         errorMessage={errors.email?.message}
         inputDataTestid='emailInput'
-        errorMessageDataTestid='errorMessage'
+        inputDataCy='contactsEmailInput'
+        errorMessageDataCy='contactsEmailInputError'
       />
       <Textarea
         placeholder='Message'
@@ -81,9 +84,10 @@ export const ContactsForm = () => {
         register={register}
         errorMessage={errors.message?.message}
         inputDataTestid='messageInput'
-        errorMessageDataTestid='errorMessage'
+        inputDataCy='contactsMessageInput'
+        errorMessageDataCy='contactsMessageInputError'
       />
-      <Button type='submit' dataTestid='sendButton'>
+      <Button type='submit' dataTestid='sendButton' dataCy='sendButton'>
         Send Message
       </Button>
     </form>

@@ -13,7 +13,10 @@ export const WhyWeStarted = () => {
   const t = useTranslations('home.whyWeStarted');
 
   return (
-    <section className={`${styles.section} section container`}>
+    <section
+      className={`${styles.section} section container`}
+      data-cy='whyWeStarted'
+    >
       <Image
         className={styles.image}
         src={BgImage}

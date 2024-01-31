@@ -12,6 +12,7 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   dataTestid?: string;
+  dataCy?: string;
 }
 
 export const Button = ({
@@ -19,11 +20,13 @@ export const Button = ({
   className,
   onClick,
   dataTestid,
+  dataCy,
   type = 'button',
   styleType = ButtonTypes.Primary,
 }: ButtonProps) => (
   <button
     data-testid={dataTestid}
+    data-cy={dataCy}
     onClick={onClick}
     type={type || 'button'}
     className={classNames(styles.button, className, styles[styleType])}

@@ -9,6 +9,7 @@ interface CategoryButtonProps {
   alt: string;
   caption: string;
   isChecked: boolean;
+  dataCy?: string;
 }
 
 export const CategoryButton = ({
@@ -17,6 +18,7 @@ export const CategoryButton = ({
   alt,
   caption,
   isChecked,
+  dataCy,
 }: CategoryButtonProps) => (
   <div>
     <input
@@ -26,7 +28,7 @@ export const CategoryButton = ({
       type='radio'
       checked={isChecked}
     />
-    <label htmlFor={`${id}category`} className={styles.button}>
+    <label htmlFor={`${id}category`} className={styles.button} data-cy={dataCy}>
       <Image className={styles.image} src={imageURL} alt={alt} />
       <span className={styles.caption}>{caption}</span>
     </label>

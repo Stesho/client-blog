@@ -48,10 +48,10 @@
         ]
       }
     ],
-    "simple-import-sort/exports": "error",
     "import/prefer-default-export": "off",
     "react/button-has-type": "warn",
     "jsx-a11y/control-has-associated-label": "warn",
-    "react/jsx-props-no-spreading": "warn"
+    "react/jsx-props-no-spreading": "warn",
+    "import/no-extraneous-dependencies": "warn"
   }
 }
