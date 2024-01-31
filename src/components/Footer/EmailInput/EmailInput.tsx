@@ -71,8 +71,14 @@ export const EmailInput = ({ messages }: EmailInputProps) => {
         placeholder='Enter Your Email'
         errorMessage={errors.email?.message}
         inputDataTestid='emailInput'
+        inputDataCy='emailInput'
+        errorMessageDataCy='emailInputError'
       />
-      <Button type='submit' dataTestid='subscribeButton'>
+      <Button
+        type='submit'
+        dataTestid='subscribeButton'
+        dataCy='subscribeButton'
+      >
         {messages.button}
       </Button>
     </form>

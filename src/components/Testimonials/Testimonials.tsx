@@ -14,7 +14,10 @@ export const Testimonials = () => {
   const nextSlide = () => setStep((prev) => prev + 1);
 
   return (
-    <section className={`${styles.section} section container`}>
+    <section
+      className={`${styles.section} section container`}
+      data-cy='testimonials'
+    >
       <div className={styles.wrapper}>
         <div className={styles.text}>
           <span className='cap'>Testimonials</span>
@@ -54,6 +57,7 @@ export const Testimonials = () => {
               onClick={prevSlide}
               disabled={step === 0}
               data-testid='testimonialsPrevButton'
+              data-cy='testimonialsPrevButton'
             >
               <span>←</span>
             </button>
@@ -63,6 +67,7 @@ export const Testimonials = () => {
               onClick={nextSlide}
               disabled={step === REVIEWS.length - 1}
               data-testid='testimonialsNextButton'
+              data-cy='testimonialsNextButton'
             >
               <span>→</span>
             </button>

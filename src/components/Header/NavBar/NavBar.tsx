@@ -37,7 +37,11 @@ export const NavBar = ({ messages, openModal }: NavBarProps) => {
         ))}
       </ul>
       <LangSelect />
-      <Button onClick={openModal} styleType={ButtonTypes.Secondary}>
+      <Button
+        dataCy='navBarButton'
+        onClick={openModal}
+        styleType={ButtonTypes.Secondary}
+      >
         {messages.button}
       </Button>
     </nav>

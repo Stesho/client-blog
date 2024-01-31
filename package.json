@@ -13,7 +13,8 @@
     "prepare": "husky install",
     "test": "jest",
     "test:silent": "jest --silent",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "cypress": "cypress open"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
@@ -42,6 +43,7 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
+    "cypress": "^13.6.4",
     "eslint": "^8",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",

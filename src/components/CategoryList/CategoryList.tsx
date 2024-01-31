@@ -55,6 +55,7 @@ export const CategoryList = ({
               key={post.id}
               className={styles.blogListItem}
               data-testid={`post${post.id}`}
+              data-cy={`post${post.id}`}
             >
               <BlogPostCard post={post} />
             </li>
@@ -78,6 +79,7 @@ export const CategoryList = ({
                     alt={category.alt}
                     caption={category.title}
                     isChecked={selectedCategory === category.title}
+                    dataCy={`${category.title}Button`}
                   />
                 </Link>
               </li>
@@ -93,6 +95,7 @@ export const CategoryList = ({
                   name={tag}
                   onChange={onSelectTag(tag)}
                   dataTestid={`${tag}Tag`}
+                  dataCy={`${tag}Tag`}
                 />
               </li>
             ))}

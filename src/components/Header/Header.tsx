@@ -28,7 +28,7 @@ export const Header = ({ messages }: HeaderProps) => {
   const burgerToCrossAnimation = () => (isBurgerOpened ? styles.cross : '');
 
   return (
-    <header className={styles.headerWrapper}>
+    <header className={styles.headerWrapper} data-cy='header'>
       <div className={`${styles.header} container`}>
         <h2 className={styles.title}>Modsen Client Blog</h2>
         <button

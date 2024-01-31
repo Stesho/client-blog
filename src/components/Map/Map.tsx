@@ -58,7 +58,7 @@ export const Map = () => {
 
   return (
     <div className={styles.mapContainer}>
-      <div ref={mapContainer} className={styles.map} />
+      <div ref={mapContainer} className={styles.map} data-cy='map' />
     </div>
   );
 };

@@ -31,6 +31,7 @@ export const LangSelect = () => {
         onChange={onChange}
         defaultValue={locale}
         disabled={isPending}
+        data-cy='langSelect'
       >
         {locales.map((lang) => (
           <option key={lang} value={lang}>

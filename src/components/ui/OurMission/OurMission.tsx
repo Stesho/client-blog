@@ -10,7 +10,10 @@ export const OurMission = () => {
   const t = useTranslations('home');
 
   return (
-    <section className={`${styles.section} section container`}>
+    <section
+      className={`${styles.section} section container`}
+      data-cy='ourMission'
+    >
       <div className={styles.decorations}>
         <div />
         <div />

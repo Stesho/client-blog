@@ -12,7 +12,7 @@ export const Categories = () => {
   const t = useTranslations('home.categories');
 
   return (
-    <section className='section container'>
+    <section className='section container' data-cy='categories'>
       <h3 className={`${styles.title} heading3`}>{t('title')}</h3>
       <ul className={styles.list}>
         {CATEGORIES.map((category) => (

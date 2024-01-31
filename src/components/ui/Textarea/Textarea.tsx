@@ -14,7 +14,9 @@ interface TextareaProps<T extends FieldValues> {
   register: UseFormRegister<T>;
   errorMessage?: string;
   inputDataTestid?: string;
+  inputDataCy?: string;
   errorMessageDataTestid?: string;
+  errorMessageDataCy?: string;
 }
 
 export const Textarea = <T extends FieldValues>({
@@ -24,7 +26,9 @@ export const Textarea = <T extends FieldValues>({
   placeholder,
   errorMessage,
   inputDataTestid,
+  inputDataCy,
   errorMessageDataTestid,
+  errorMessageDataCy,
   styleType = InputTypes.Primary,
 }: TextareaProps<T>) => (
   <div className={classNames(styles.wrapper, className)}>
@@ -36,9 +40,14 @@ export const Textarea = <T extends FieldValues>({
       })}
       rows={5}
       data-testid={inputDataTestid}
+      data-cy={inputDataCy}
     />
     {!!errorMessage && (
-      <div className={styles.errorMessage} data-testid={errorMessageDataTestid}>
+      <div
+        className={styles.errorMessage}
+        data-testid={errorMessageDataTestid}
+        data-cy={errorMessageDataCy}
+      >
         {errorMessage}
       </div>
     )}

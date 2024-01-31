@@ -10,7 +10,7 @@ interface VideoModalProps {
 
 export const VideoModal = ({ onClose }: VideoModalProps) => (
   <Modal id='about-us-modal' onClose={onClose}>
-    <div className={styles.videoResponsive}>
+    <div className={styles.videoResponsive} data-cy='videoAboutUs'>
       <iframe
         data-testid='videoModal'
         src='https://www.youtube.com/embed/zRp4NS_eeGc'
