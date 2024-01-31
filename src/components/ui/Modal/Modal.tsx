@@ -31,6 +31,8 @@ export const Modal = ({ id, onClose, children }: ModalProps) => {
             className={styles.closeButton}
             onClick={onClose}
             type='button'
+            data-testid='modalCloseButton'
+            data-cy='modalCloseButton'
           >
             ✖
           </button>

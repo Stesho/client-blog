@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
+
 import { Button } from '@/components/ui/Button/Button';
-import { Post } from '@/types/post';
-import Link from 'next/link';
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
+import { Post } from '@/types/post';
+
 import styles from './HomeInfo.module.scss';
 
 interface HomeInfoProps {
@@ -10,6 +13,7 @@ interface HomeInfoProps {
 }
 
 export const HomeInfo = ({ post }: HomeInfoProps) => {
+  const t = useTranslations('home');
   const maxTextLetters = 150;
 
   return (
@@ -27,7 +31,9 @@ export const HomeInfo = ({ post }: HomeInfoProps) => {
           {post.text.slice(0, maxTextLetters)}
         </p>
         <Link href={`${ROUTES.blog}/${post.id}`}>
-          <Button>Read More {'>'}</Button>
+          <Button>
+            {t('readMore')} {'>'}
+          </Button>
         </Link>
       </div>
     </section>

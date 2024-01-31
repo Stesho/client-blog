@@ -1,17 +1,22 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
+
 import styles from './PrivacyPolicy.module.scss';
 
-export const PrivacyPolicy = () => (
+export const PrivacyPolicy = () => {
+  const t = useTranslations('privacyPolicy');
+
+  return (
     <>
       <section className={`${styles.head} section topSection`}>
-        <h1 className="heading1">Privacy Policy</h1>
-        <span className="body1">Last Updated on 27th January 2022</span>
+        <h1 className='heading1'>{t('title')}</h1>
+        <span className='body1'>{t('lastUpdated')}</span>
       </section>
       <section className={`${styles.text} section container`}>
         <h2 className={`${styles.textTitle} heading1`}>
           Lorem ipsum dolor sit amet
         </h2>
-        <p className="body1">
+        <p className='body1'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -33,7 +38,7 @@ export const PrivacyPolicy = () => (
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor.
         </h2>
-        <p className="body1">
+        <p className='body1'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Non
           blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
@@ -62,3 +67,4 @@ export const PrivacyPolicy = () => (
       </section>
     </>
   );
+};

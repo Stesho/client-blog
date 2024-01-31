@@ -1,11 +1,11 @@
-import Author1Img from '@/assets/img/author/man-in-yellow.jpg';
-import Author2Img from '@/assets/img/author/fashion-woman.jpg';
 import Author3Img from '@/assets/img/author/content-baker.jpg';
-import Author4Img from '@/assets/img/author/woman-in-white.jpg';
-import GuyHawkins from '@/assets/img/author/guy-hawkins.jpg';
 import EleanorPena from '@/assets/img/author/eleanor-pena.jpg';
-import RobertFox from '@/assets/img/author/robert-fox.jpg';
+import Author2Img from '@/assets/img/author/fashion-woman.jpg';
+import GuyHawkins from '@/assets/img/author/guy-hawkins.jpg';
 import JacobJones from '@/assets/img/author/jacob-jones.jpg';
+import Author1Img from '@/assets/img/author/man-in-yellow.jpg';
+import RobertFox from '@/assets/img/author/robert-fox.jpg';
+import Author4Img from '@/assets/img/author/woman-in-white.jpg';
 import { Author } from '@/types/author';
 
 export const AUTHORS: Author[] = [

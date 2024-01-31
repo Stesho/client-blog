@@ -1,5 +1,5 @@
-import { Locale } from '@/types/lang';
 import { locales } from '@/i18n';
+import { Locale } from '@/types/lang';
 
 export const getUpdatedPathname = (pathname: string, locale: Locale) => {
   if (!pathname) {

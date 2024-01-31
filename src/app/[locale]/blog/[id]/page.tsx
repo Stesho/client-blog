@@ -1,15 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
-import { Join } from '@/components/ui/Join/Join';
+import { unstable_setRequestLocale } from 'next-intl/server';
+
 import { BlogPostHead } from '@/components/ui/BlogPostHead/BlogPostHead';
+import { Join } from '@/components/ui/Join/Join';
 import { WhatToRead } from '@/components/ui/WhatToRead/WhatToRead';
 import { POSTS } from '@/constants/posts';
-import { getPostById } from '@/utils/getPostById';
-import { redirect } from 'next/navigation';
 import { ROUTES } from '@/constants/routes';
-import { getRecommendedPosts } from '@/utils/getRecommendedPosts';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { redirect } from '@/navigation';
 import { PageParams } from '@/types/pageParams';
+import { getPostById } from '@/utils/getPostById';
+import { getRecommendedPosts } from '@/utils/getRecommendedPosts';
+
 import styles from './page.module.scss';
 
 export function generateStaticParams() {
@@ -28,7 +30,7 @@ export default function BlogPost({
   const recommendedPosts = getRecommendedPosts(params.id, 3);
 
   if (!post) {
-    redirect(`${ROUTES.home}`);
+    return redirect(`${ROUTES.home}`);
   }
 
   return (

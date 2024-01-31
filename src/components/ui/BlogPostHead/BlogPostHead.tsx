@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import Author from '@/assets/img/home/review-author-1.jpg';
+
 import Shuttle from '@/assets/img/category/shuttle.png';
+import Author from '@/assets/img/home/review-author-1.jpg';
+
 import styles from './BlogPostHead.module.scss';
 
 interface BlogPostHeadProps {

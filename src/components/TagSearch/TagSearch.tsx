@@ -1,11 +1,21 @@
 import React, { ChangeEvent, useDeferredValue, useState } from 'react';
+
 import { Button } from '@/components/ui/Button/Button';
-import { POSTS } from '@/constants/posts';
-import Link from 'next/link';
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
+import { Post } from '@/types/post';
+
 import styles from './TagSearch.module.scss';
 
-export const TagSearch = () => {
+interface TagSearchProps {
+  posts: Post[];
+  messages: {
+    input: string;
+    button: string;
+  };
+}
+
+export const TagSearch = ({ posts, messages }: TagSearchProps) => {
   const [searchValue, setSearchValue] = useState('');
   const search = useDeferredValue(searchValue);
 
@@ -19,18 +29,25 @@ export const TagSearch = () => {
         value={search}
         onChange={onInputSearch}
         className={styles.searchInput}
-        placeholder='Search for tag...'
+        placeholder={`${messages.input}...`}
+        data-testid='tagSearchInput'
       />
-      <Button>Search</Button>
+      <Button>{messages.button}</Button>
       {search !== '' && (
         <ul className={styles.postsList}>
-          {POSTS.filter((post) =>
-            post.tags.find((tag) => tag.includes(search.toLowerCase())),
-          ).map((post) => (
-            <li key={post.id} className={styles.postsItem}>
-              <Link href={`${ROUTES.blog}/${post.id}`}>{post.title}</Link>
-            </li>
-          ))}
+          {posts
+            .filter((post) =>
+              post.tags.find((tag) => tag.includes(search.toLowerCase())),
+            )
+            .map((post) => (
+              <li
+                key={post.id}
+                className={styles.postsItem}
+                data-testid={`post${post.id}`}
+              >
+                <Link href={`${ROUTES.blog}/${post.id}`}>{post.title}</Link>
+              </li>
+            ))}
         </ul>
       )}
     </div>

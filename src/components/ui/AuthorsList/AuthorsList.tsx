@@ -1,10 +1,12 @@
 import React from 'react';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
+
 import { AuthorCard } from '@/components/ui/AuthorCard/AuthorCard';
-import { Author } from '@/types/author';
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
+import { Author } from '@/types/author';
+
 import styles from './AuthorsList.module.scss';
 
 interface AuthorsListProps {

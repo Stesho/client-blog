@@ -1,7 +1,9 @@
 import React from 'react';
+
 import { FeaturedPost } from '@/components/ui/FeaturedPost/FeaturedPost';
 import { HomeAllPosts } from '@/components/ui/HomeAllPosts/HomeAllPosts';
 import { Post } from '@/types/post';
+
 import styles from './HomePosts.module.scss';
 
 interface HomePostsProps {

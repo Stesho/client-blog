@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+
+import { NavBar } from '@/components/Header/NavBar/NavBar';
 import { VideoModal } from '@/components/VideoModal/VideoModal';
 import { useWindowSize } from '@/hooks/useWindowSize';
-import { NavBar } from '@/components/ui/Header/NavBar/NavBar';
+
 import styles from './Header.module.scss';
 
 export interface HeaderProps {
@@ -26,7 +28,7 @@ export const Header = ({ messages }: HeaderProps) => {
   const burgerToCrossAnimation = () => (isBurgerOpened ? styles.cross : '');
 
   return (
-    <header className={styles.headerWrapper}>
+    <header className={styles.headerWrapper} data-cy='header'>
       <div className={`${styles.header} container`}>
         <h2 className={styles.title}>Modsen Client Blog</h2>
         <button

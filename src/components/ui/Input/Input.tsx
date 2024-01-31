@@ -1,9 +1,11 @@
 'use client';
 
 import React, { HTMLInputTypeAttribute } from 'react';
-import classNames from 'classnames';
-import { InputTypes } from '@/types/inputs';
 import { FieldValues, Path, UseFormRegister } from 'react-hook-form';
+import classNames from 'classnames';
+
+import { InputTypes } from '@/types/inputs';
+
 import styles from './Input.module.scss';
 
 interface InputProps<T extends FieldValues> {
@@ -14,6 +16,10 @@ interface InputProps<T extends FieldValues> {
   label: Path<T>;
   register: UseFormRegister<T>;
   errorMessage?: string;
+  inputDataTestid?: string;
+  inputDataCy?: string;
+  errorMessageDataTestid?: string;
+  errorMessageDataCy?: string;
 }
 
 export const Input = <T extends FieldValues>({
@@ -22,20 +28,32 @@ export const Input = <T extends FieldValues>({
   errorMessage,
   placeholder,
   className,
+  inputDataTestid,
+  inputDataCy,
+  errorMessageDataTestid,
+  errorMessageDataCy,
   type = 'text',
   styleType = InputTypes.Primary,
 }: InputProps<T>) => (
-    <div className={classNames(styles.wrapper, className)}>
-      <input
-        {...register(label)}
-        type={type}
-        placeholder={placeholder}
-        className={classNames(styles.input, styles[styleType], {
-          [styles.error]: !!errorMessage,
-        })}
-      />
-      {!!errorMessage && (
-        <div className={styles.errorMessage}>{errorMessage}</div>
-      )}
-    </div>
-  );
+  <div className={classNames(styles.wrapper, className)}>
+    <input
+      {...register(label)}
+      type={type}
+      placeholder={placeholder}
+      className={classNames(styles.input, styles[styleType], {
+        [styles.error]: !!errorMessage,
+      })}
+      data-testid={inputDataTestid}
+      data-cy={inputDataCy}
+    />
+    {!!errorMessage && (
+      <div
+        className={styles.errorMessage}
+        data-testid={errorMessageDataTestid}
+        data-cy={errorMessageDataCy}
+      >
+        {errorMessage}
+      </div>
+    )}
+  </div>
+);

@@ -1,14 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
-import { Button } from '@/components/ui/Button/Button';
+import { useTranslations } from 'next-intl';
+
 import BlogImg from '@/assets/img/blog/man-in-white-dress.jpg';
+import { Button } from '@/components/ui/Button/Button';
+
 import styles from './BlogHead.module.scss';
 
-export const BlogHead = () => (
+export const BlogHead = () => {
+  const t = useTranslations('blog.head');
+
+  return (
     <section className={`${styles.section} topSection section`}>
       <div className={`${styles.wrapper} container`}>
         <div className={`${styles.content}`}>
-          <span className="cap">Featured Post</span>
+          <span className='cap'>{t('caption')}</span>
           <h2 className={`${styles.header} heading2`}>
             Step-by-step guide to choosing great font pairs
           </h2>
@@ -20,13 +26,16 @@ export const BlogHead = () => (
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident.
           </p>
-          <Button>Read More {'>'}</Button>
+          <Button>
+            {t('button')} {'>'}
+          </Button>
         </div>
         <Image
           className={styles.image}
           src={BlogImg}
-          alt="man in white dress"
+          alt='man in white dress'
         />
       </div>
     </section>
   );
+};

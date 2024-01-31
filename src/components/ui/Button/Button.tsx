@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
-import { ButtonTypes } from '@/types/buttons';
 import classNames from 'classnames';
+
+import { ButtonTypes } from '@/types/buttons';
+
 import styles from './Button.module.scss';
 
 interface ButtonProps {
@@ -9,16 +11,22 @@ interface ButtonProps {
   styleType?: ButtonTypes;
   className?: string;
   onClick?: () => void;
+  dataTestid?: string;
+  dataCy?: string;
 }
 
 export const Button = ({
   children,
   className,
   onClick,
+  dataTestid,
+  dataCy,
   type = 'button',
   styleType = ButtonTypes.Primary,
 }: ButtonProps) => (
   <button
+    data-testid={dataTestid}
+    data-cy={dataCy}
     onClick={onClick}
     type={type || 'button'}
     className={classNames(styles.button, className, styles[styleType])}

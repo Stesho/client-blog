@@ -2,10 +2,11 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from '@emailjs/browser';
-import { Input } from '@/components/ui/Input/Input';
+import { yupResolver } from '@hookform/resolvers/yup';
+
 import { Button } from '@/components/ui/Button/Button';
+import { Input } from '@/components/ui/Input/Input';
 import { Textarea } from '@/components/ui/Textarea/Textarea';
 import {
   EMAIL_PUBLIC_KEY,
@@ -14,9 +15,19 @@ import {
 } from '@/constants/environment';
 import { contactsFormSchema } from '@/constants/validationSchemas';
 import { ContactsFormData } from '@/types/forms';
+
 import styles from './ContactsForm.module.scss';
 
-export const ContactsForm = () => {
+interface ContactsFormProps {
+  messages: {
+    name: string;
+    email: string;
+    message: string;
+    send: string;
+  };
+}
+
+export const ContactsForm = ({ messages }: ContactsFormProps) => {
   const {
     register,
     handleSubmit,
@@ -56,26 +67,38 @@ export const ContactsForm = () => {
     <form
       className={`${styles.form} container`}
       onSubmit={handleSubmit(sendEmail)}
+      data-cy='contactsForm'
     >
       <Input
-        placeholder='Full name'
+        placeholder={messages.name}
         label='name'
         register={register}
         errorMessage={errors.name?.message}
+        inputDataTestid='nameInput'
+        inputDataCy='contactsNameInput'
+        errorMessageDataCy='contactsNameInputError'
       />
       <Input
-        placeholder='Your Email'
+        placeholder={messages.email}
         label='email'
         register={register}
         errorMessage={errors.email?.message}
+        inputDataTestid='emailInput'
+        inputDataCy='contactsEmailInput'
+        errorMessageDataCy='contactsEmailInputError'
       />
       <Textarea
-        placeholder='Message'
+        placeholder={messages.message}
         label='message'
         register={register}
         errorMessage={errors.message?.message}
+        inputDataTestid='messageInput'
+        inputDataCy='contactsMessageInput'
+        errorMessageDataCy='contactsMessageInputError'
       />
-      <Button type='submit'>Send Message</Button>
+      <Button type='submit' dataTestid='sendButton' dataCy='sendButton'>
+        {messages.send}
+      </Button>
     </form>
   );
 };

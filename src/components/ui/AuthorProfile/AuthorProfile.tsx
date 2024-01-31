@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import { FOOTER_LINKS } from '@/constants/footer';
+
+import { FOOTER_SOCIAL } from '@/constants/footer';
 import { Author } from '@/types/author';
+
 import styles from './AuthorProfile.module.scss';
 
 interface AuthorProfileProps {
@@ -27,7 +29,7 @@ export const AuthorProfile = ({ author }: AuthorProfileProps) => (
           risus viverra adipiscing at in tellus.
         </p>
         <ul className={styles.links}>
-          {FOOTER_LINKS.map((link) => (
+          {FOOTER_SOCIAL.map((link) => (
             <li>
               <a href={link.link}>
                 <Image src={link.iconURL} alt={link.alt} />

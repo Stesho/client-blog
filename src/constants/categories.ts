@@ -1,7 +1,7 @@
 import BusinessIcon from '@/assets/img/category/business.png';
+import TechnologyIcon from '@/assets/img/category/cyborg.png';
 import EconomyIcon from '@/assets/img/category/economy.png';
 import StartupIcon from '@/assets/img/category/shuttle.png';
-import TechnologyIcon from '@/assets/img/category/cyborg.png';
 
 export const CATEGORIES = [
   {

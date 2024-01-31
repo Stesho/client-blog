@@ -1,14 +1,19 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
+
 import styles from './OurMission.module.scss';
 
 export const OurMission = () => {
   const t = useTranslations('home');
 
   return (
-    <section className={`${styles.section} section container`}>
+    <section
+      className={`${styles.section} section container`}
+      data-cy='ourMission'
+    >
       <div className={styles.decorations}>
         <div />
         <div />
