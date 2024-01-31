@@ -14,6 +14,8 @@ interface InputProps<T extends FieldValues> {
   label: Path<T>;
   register: UseFormRegister<T>;
   errorMessage?: string;
+  inputDataTestid?: string;
+  errorMessageDataTestid?: string;
 }
 
 export const Input = <T extends FieldValues>({
@@ -22,20 +24,25 @@ export const Input = <T extends FieldValues>({
   errorMessage,
   placeholder,
   className,
+  inputDataTestid,
+  errorMessageDataTestid,
   type = 'text',
   styleType = InputTypes.Primary,
 }: InputProps<T>) => (
-    <div className={classNames(styles.wrapper, className)}>
-      <input
-        {...register(label)}
-        type={type}
-        placeholder={placeholder}
-        className={classNames(styles.input, styles[styleType], {
-          [styles.error]: !!errorMessage,
-        })}
-      />
-      {!!errorMessage && (
-        <div className={styles.errorMessage}>{errorMessage}</div>
-      )}
-    </div>
-  );
+  <div className={classNames(styles.wrapper, className)}>
+    <input
+      {...register(label)}
+      type={type}
+      placeholder={placeholder}
+      className={classNames(styles.input, styles[styleType], {
+        [styles.error]: !!errorMessage,
+      })}
+      data-testid={inputDataTestid}
+    />
+    {!!errorMessage && (
+      <div className={styles.errorMessage} data-testid={errorMessageDataTestid}>
+        {errorMessage}
+      </div>
+    )}
+  </div>
+);

@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { ROUTES } from '@/constants/routes';
 import { filterPosts } from '@/utils/filterPosts';
 import { TagSearch } from '@/components/TagSearch/TagSearch';
+import { POSTS } from '@/constants/posts';
 import styles from './CategoryList.module.scss';
 
 interface CategoryListProps {
@@ -48,14 +49,18 @@ export const CategoryList = ({
           <div className={styles.notFound}>Selected posts not found</div>
         ) : (
           filteredPosts.map((post) => (
-            <li key={post.id} className={styles.blogListItem}>
+            <li
+              key={post.id}
+              className={styles.blogListItem}
+              data-testid={`post${post.id}`}
+            >
               <BlogPostCard post={post} />
             </li>
           ))
         )}
       </ul>
       <div className={styles.controlBar}>
-        <TagSearch />
+        <TagSearch posts={POSTS} />
         <div>
           <h3 className={`${styles.categoryTitle} heading2`}>Categories</h3>
           <ul className={styles.categoryList}>
@@ -82,7 +87,11 @@ export const CategoryList = ({
           <ul className={styles.tagList}>
             {TAGS.map((tag) => (
               <li key={tag}>
-                <TagButton name={tag} onChange={onSelectTag(tag)} />
+                <TagButton
+                  name={tag}
+                  onChange={onSelectTag(tag)}
+                  dataTestid={`${tag}Tag`}
+                />
               </li>
             ))}
           </ul>

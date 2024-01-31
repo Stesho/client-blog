@@ -24,7 +24,11 @@ export const BlogAllPosts = () => {
           page * displayItemsCount,
           page * displayItemsCount + displayItemsCount,
         ).map((post) => (
-          <li key={post.id} className={styles.listItem}>
+          <li
+            key={post.id}
+            className={styles.listItem}
+            data-testid={`post${post.id}`}
+          >
             <BlogPostCard post={post} />
           </li>
         ))}
@@ -35,6 +39,7 @@ export const BlogAllPosts = () => {
           onClick={onPrev}
           type='button'
           className={`${styles.controller} heading3`}
+          data-testid='prevButton'
         >
           {'<'} Prev
         </button>
@@ -43,6 +48,7 @@ export const BlogAllPosts = () => {
           onClick={onNext}
           type='button'
           className={`${styles.controller} heading3`}
+          data-testid='nextButton'
         >
           Next {'>'}
         </button>
