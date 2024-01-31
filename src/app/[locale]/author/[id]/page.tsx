@@ -4,7 +4,7 @@ import { AuthorPosts } from '@/components/ui/AuthorPosts/AuthorPosts';
 import { getAuthorPosts } from '@/utils/getAuthorPosts';
 import { AUTHORS } from '@/constants/authors';
 import { getAuthorById } from '@/utils/getAuthorById';
-import { redirect } from 'next/navigation';
+import { redirect } from '@/navigation';
 import { ROUTES } from '@/constants/routes';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { PageParams } from '@/types/pageParams';
@@ -25,7 +25,7 @@ export default function Page({
   const authorPosts = getAuthorPosts(params.id);
 
   if (!author) {
-    redirect(`${ROUTES.home}`);
+    return redirect(`${ROUTES.home}`);
   }
 
   return (

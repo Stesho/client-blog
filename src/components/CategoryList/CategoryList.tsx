@@ -7,7 +7,7 @@ import { CategoryButton } from '@/components/ui/CategoryButton/CategoryButton';
 import { TagButton } from '@/components/ui/TagButton/TagButton';
 import { TAGS } from '@/constants/tags';
 import { Post } from '@/types/post';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ROUTES } from '@/constants/routes';
 import { filterPosts } from '@/utils/filterPosts';
 import { TagSearch } from '@/components/TagSearch/TagSearch';

@@ -2,7 +2,7 @@ import React from 'react';
 import { CategoryCard } from '@/components/ui/CategoryCard/CategoryCard';
 import { CATEGORIES } from '@/constants/categories';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ROUTES } from '@/constants/routes';
 import styles from './Categories.module.scss';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import classNames from 'classnames';
 import { AuthorCard } from '@/components/ui/AuthorCard/AuthorCard';
 import { Author } from '@/types/author';

@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { POSTS } from '@/constants/posts';
 import { HomePost } from '@/components/ui/HomePost/HomePost';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ROUTES } from '@/constants/routes';
 import styles from './HomeAllPosts.module.scss';
 

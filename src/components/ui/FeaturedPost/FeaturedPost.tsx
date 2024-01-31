@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/Button/Button';
 import { BlogCard } from '@/components/ui/BlogCard/BlogCard';
 import { useTranslations } from 'next-intl';
 import { Post } from '@/types/post';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ROUTES } from '@/constants/routes';
 import styles from './FeaturedPost.module.scss';
 

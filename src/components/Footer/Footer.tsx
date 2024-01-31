@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { FOOTER_LINKS, FOOTER_SOCIAL } from '@/constants/footer';
 import { EmailInput } from '@/components/Footer/EmailInput/EmailInput';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import styles from './Footer.module.scss';
 
 export const Footer = () => {

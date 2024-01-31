@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/Button/Button';
 import { Post } from '@/types/post';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ROUTES } from '@/constants/routes';
 import styles from './HomeInfo.module.scss';
 

@@ -5,7 +5,7 @@ import { BlogPostHead } from '@/components/ui/BlogPostHead/BlogPostHead';
 import { WhatToRead } from '@/components/ui/WhatToRead/WhatToRead';
 import { POSTS } from '@/constants/posts';
 import { getPostById } from '@/utils/getPostById';
-import { redirect } from 'next/navigation';
+import { redirect } from '@/navigation';
 import { ROUTES } from '@/constants/routes';
 import { getRecommendedPosts } from '@/utils/getRecommendedPosts';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -28,7 +28,7 @@ export default function BlogPost({
   const recommendedPosts = getRecommendedPosts(params.id, 3);
 
   if (!post) {
-    redirect(`${ROUTES.home}`);
+    return redirect(`${ROUTES.home}`);
   }
 
   return (

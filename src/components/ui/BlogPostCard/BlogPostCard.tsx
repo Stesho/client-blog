@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ROUTES } from '@/constants/routes';
 import { Post } from '@/types/post';
 import styles from './BlogPostCard.module.scss';

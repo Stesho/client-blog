@@ -1,9 +1,9 @@
 import React from 'react';
 import { HEADER_LINKS } from '@/constants/headerLinks';
-import Link from 'next/link';
 import { LangSelect } from '@/components/ui/LangSelect/LangSelect';
 import { Button } from '@/components/ui/Button/Button';
 import { ButtonTypes } from '@/types/buttons';
+import { Link } from '@/navigation';
 import styles from './NavBar.module.scss';
 
 interface NavBarProps {
