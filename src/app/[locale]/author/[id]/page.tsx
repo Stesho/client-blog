@@ -1,13 +1,14 @@
 import React from 'react';
-import { AuthorProfile } from '@/components/ui/AuthorProfile/AuthorProfile';
-import { AuthorPosts } from '@/components/ui/AuthorPosts/AuthorPosts';
-import { getAuthorPosts } from '@/utils/getAuthorPosts';
-import { AUTHORS } from '@/constants/authors';
-import { getAuthorById } from '@/utils/getAuthorById';
-import { redirect } from 'next/navigation';
-import { ROUTES } from '@/constants/routes';
 import { unstable_setRequestLocale } from 'next-intl/server';
+
+import { AuthorPosts } from '@/components/ui/AuthorPosts/AuthorPosts';
+import { AuthorProfile } from '@/components/ui/AuthorProfile/AuthorProfile';
+import { AUTHORS } from '@/constants/authors';
+import { ROUTES } from '@/constants/routes';
+import { redirect } from '@/navigation';
 import { PageParams } from '@/types/pageParams';
+import { getAuthorById } from '@/utils/getAuthorById';
+import { getAuthorPosts } from '@/utils/getAuthorPosts';
 
 export function generateStaticParams() {
   return AUTHORS.map((post) => ({
@@ -25,7 +26,7 @@ export default function Page({
   const authorPosts = getAuthorPosts(params.id);
 
   if (!author) {
-    redirect(`${ROUTES.home}`);
+    return redirect(`${ROUTES.home}`);
   }
 
   return (

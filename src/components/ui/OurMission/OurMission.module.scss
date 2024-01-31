@@ -69,4 +69,8 @@
   font-weight: 700;
   line-height: 32px;
   cursor: pointer;
+
+  &:hover {
+    color: rgba($purple, 0.6);
+  }
 }

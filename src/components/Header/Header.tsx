@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+
+import { NavBar } from '@/components/Header/NavBar/NavBar';
 import { VideoModal } from '@/components/VideoModal/VideoModal';
 import { useWindowSize } from '@/hooks/useWindowSize';
-import { NavBar } from '@/components/ui/Header/NavBar/NavBar';
+
 import styles from './Header.module.scss';
 
 export interface HeaderProps {

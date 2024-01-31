@@ -1,9 +1,11 @@
 'use client';
 
 import React, { HTMLInputTypeAttribute } from 'react';
-import classNames from 'classnames';
-import { InputTypes } from '@/types/inputs';
 import { FieldValues, Path, UseFormRegister } from 'react-hook-form';
+import classNames from 'classnames';
+
+import { InputTypes } from '@/types/inputs';
+
 import styles from './Input.module.scss';
 
 interface InputProps<T extends FieldValues> {

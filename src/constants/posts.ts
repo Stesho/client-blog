@@ -1,13 +1,13 @@
-import Blog6Img from '@/assets/img/posts/man-in-black-suit.png';
 import Blog5Img from '@/assets/img/blogPost/two-women-in-front-of-board.png';
-import Blog4Img from '@/assets/img/posts/white-concrete-building.png';
+import Blog6Img from '@/assets/img/posts/man-in-black-suit.png';
+import Blog1Img from '@/assets/img/posts/photo-of-people.jpg';
 import Blog3Img from '@/assets/img/posts/photo-of-people-walking.jpg';
 import Blog2Img from '@/assets/img/posts/photo-of-woman.jpg';
-import Blog1Img from '@/assets/img/posts/photo-of-people.jpg';
-import { Post } from '@/types/post';
-import { TAGS } from '@/constants/tags';
-import { CATEGORIES } from '@/constants/categories';
+import Blog4Img from '@/assets/img/posts/white-concrete-building.png';
 import { AUTHORS } from '@/constants/authors';
+import { CATEGORIES } from '@/constants/categories';
+import { TAGS } from '@/constants/tags';
+import { Post } from '@/types/post';
 
 export const POSTS: Post[] = [
   {

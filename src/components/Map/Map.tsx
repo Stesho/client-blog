@@ -2,11 +2,12 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import mapboxgl, { Map as MapboxMap } from 'mapbox-gl';
+
 import { MAPBOX_ACCESS_TOKEN } from '@/constants/environment';
+import { MAP_MARKERS } from '@/constants/mapMarkers';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './Popup.scss';
-import { MAP_MARKERS } from '@/constants/mapMarkers';
 import styles from './Map.module.scss';
 
 mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;

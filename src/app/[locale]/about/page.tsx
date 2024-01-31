@@ -1,14 +1,15 @@
 import React from 'react';
-import { AboutUs } from '@/components/ui/AboutUs/AboutUs';
-import { OurVision } from '@/components/ui/OurVision/OurVision';
-import { AboutBlock } from '@/components/ui/AboutBlock/AboutBlock';
+import { unstable_setRequestLocale } from 'next-intl/server';
+
 import TeamImg from '@/assets/img/aboutUs/ground-group-growth.jpg';
 import WhyWeStartedImg from '@/assets/img/aboutUs/three-persons-sitting.jpg';
-import { AuthorsList } from '@/components/ui/AuthorsList/AuthorsList';
-import { AUTHORS } from '@/constants/authors';
-import { Join } from '@/components/ui/Join/Join';
+import { AboutBlock } from '@/components/ui/AboutBlock/AboutBlock';
 import { AboutStatistic } from '@/components/ui/AboutStatistic/AboutStatistic';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { AboutUs } from '@/components/ui/AboutUs/AboutUs';
+import { AuthorsList } from '@/components/ui/AuthorsList/AuthorsList';
+import { Join } from '@/components/ui/Join/Join';
+import { OurVision } from '@/components/ui/OurVision/OurVision';
+import { AUTHORS } from '@/constants/authors';
 import { PageParams } from '@/types/pageParams';
 
 export default function AboutPage({ params }: { params: PageParams }) {

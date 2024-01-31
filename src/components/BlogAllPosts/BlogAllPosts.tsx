@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
+
 import { BlogPostCard } from '@/components/ui/BlogPostCard/BlogPostCard';
 import { POSTS } from '@/constants/posts';
+
 import styles from './BlogAllPosts.module.scss';
 
 export const BlogAllPosts = () => {

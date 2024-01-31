@@ -1,8 +1,9 @@
 import React from 'react';
-import '@testing-library/jest-dom';
-
 import { fireEvent, render } from '@testing-library/react';
+
 import { Testimonials } from '@/components/Testimonials/Testimonials';
+
+import '@testing-library/jest-dom';
 
 describe('Testimonials', () => {
   it('should correctly render component', () => {

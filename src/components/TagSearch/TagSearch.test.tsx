@@ -1,13 +1,15 @@
 import React from 'react';
-import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/react';
-import { TagSearch } from '@/components/TagSearch/TagSearch';
-import { TAGS } from '@/constants/tags';
-import { AUTHORS } from '@/constants/authors';
-import { CATEGORIES } from '@/constants/categories';
+
 import Blog6Img from '@/assets/img/posts/man-in-black-suit.png';
 import Blog1Img from '@/assets/img/posts/photo-of-people.jpg';
 import Blog3Img from '@/assets/img/posts/photo-of-people-walking.jpg';
+import { TagSearch } from '@/components/TagSearch/TagSearch';
+import { AUTHORS } from '@/constants/authors';
+import { CATEGORIES } from '@/constants/categories';
+import { TAGS } from '@/constants/tags';
+
+import '@testing-library/jest-dom';
 
 const testPosts = [
   {

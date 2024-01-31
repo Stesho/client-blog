@@ -1,17 +1,19 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
+
+import { TagSearch } from '@/components/TagSearch/TagSearch';
 import { BlogPostCard } from '@/components/ui/BlogPostCard/BlogPostCard';
-import { CATEGORIES } from '@/constants/categories';
 import { CategoryButton } from '@/components/ui/CategoryButton/CategoryButton';
 import { TagButton } from '@/components/ui/TagButton/TagButton';
-import { TAGS } from '@/constants/tags';
-import { Post } from '@/types/post';
-import Link from 'next/link';
-import { ROUTES } from '@/constants/routes';
-import { filterPosts } from '@/utils/filterPosts';
-import { TagSearch } from '@/components/TagSearch/TagSearch';
+import { CATEGORIES } from '@/constants/categories';
 import { POSTS } from '@/constants/posts';
+import { ROUTES } from '@/constants/routes';
+import { TAGS } from '@/constants/tags';
+import { Link } from '@/navigation';
+import { Post } from '@/types/post';
+import { filterPosts } from '@/utils/filterPosts';
+
 import styles from './CategoryList.module.scss';
 
 interface CategoryListProps {

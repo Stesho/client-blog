@@ -1,9 +1,10 @@
 import React from 'react';
-import { Join } from '@/components/ui/Join/Join';
-import { BlogHead } from '@/components/ui/BlogHead/BlogHead';
-import { BlogAllPosts } from '@/components/BlogAllPosts/BlogAllPosts';
-import { Categories } from '@/components/ui/Categories/Categories';
 import { unstable_setRequestLocale } from 'next-intl/server';
+
+import { BlogAllPosts } from '@/components/BlogAllPosts/BlogAllPosts';
+import { BlogHead } from '@/components/ui/BlogHead/BlogHead';
+import { Categories } from '@/components/ui/Categories/Categories';
+import { Join } from '@/components/ui/Join/Join';
 import { PageParams } from '@/types/pageParams';
 
 export default function BlogPage({ params }: { params: PageParams }) {

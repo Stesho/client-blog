@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image';
+
 import { Author } from '@/types/author';
 
 export interface Post {

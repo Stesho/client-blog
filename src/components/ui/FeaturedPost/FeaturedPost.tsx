@@ -1,10 +1,12 @@
 import React from 'react';
-import { Button } from '@/components/ui/Button/Button';
-import { BlogCard } from '@/components/ui/BlogCard/BlogCard';
 import { useTranslations } from 'next-intl';
-import { Post } from '@/types/post';
-import Link from 'next/link';
+
+import { BlogCard } from '@/components/ui/BlogCard/BlogCard';
+import { Button } from '@/components/ui/Button/Button';
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
+import { Post } from '@/types/post';
+
 import styles from './FeaturedPost.module.scss';
 
 interface FeaturedPostProps {

@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { BlogCard } from '@/components/ui/BlogCard/BlogCard';
-import { Post } from '@/types/post';
-import Link from 'next/link';
 import { ROUTES } from '@/constants/routes';
+import { Link } from '@/navigation';
+import { Post } from '@/types/post';
+
 import styles from './WhatToRead.module.scss';
 
 interface WhatToReadProps {
