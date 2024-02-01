@@ -1,38 +1,38 @@
-import Author3Img from '@/assets/img/author/content-baker.jpg';
-import EleanorPena from '@/assets/img/author/eleanor-pena.jpg';
-import Author2Img from '@/assets/img/author/fashion-woman.jpg';
-import GuyHawkins from '@/assets/img/author/guy-hawkins.jpg';
-import JacobJones from '@/assets/img/author/jacob-jones.jpg';
-import Author1Img from '@/assets/img/author/man-in-yellow.jpg';
-import RobertFox from '@/assets/img/author/robert-fox.jpg';
-import Author4Img from '@/assets/img/author/woman-in-white.jpg';
+import DianneRussell from '@/assets/img/author/dianne-russell.png';
+import EleanorPena from '@/assets/img/author/eleanor-pena.png';
+import FloydMiles from '@/assets/img/author/floyd-miles.png';
+import GuyHawkins from '@/assets/img/author/guy-hawkins.png';
+import JacobJones from '@/assets/img/author/jacob-jones.png';
+import JennyWilson from '@/assets/img/author/jenny-wilson.png';
+import LeslieAlexander from '@/assets/img/author/leslie-alexander.png';
+import RobertFox from '@/assets/img/author/robert-fox.png';
 import { Author } from '@/types/author';
 
 export const AUTHORS: Author[] = [
   {
     id: '1',
-    imageURL: Author1Img,
+    imageURL: FloydMiles,
     alt: 'Floyd Miles',
     name: 'Floyd Miles',
     activity: 'Content Writer @Company',
   },
   {
     id: '2',
-    imageURL: Author2Img,
+    imageURL: DianneRussell,
     alt: 'Dianne Russell',
     name: 'Dianne Russell',
     activity: 'Content Writer @Company',
   },
   {
     id: '3',
-    imageURL: Author4Img,
+    imageURL: JennyWilson,
     alt: 'Jenny Wilson',
     name: 'Jenny Wilson',
     activity: 'Content Writer @Company',
   },
   {
     id: '4',
-    imageURL: Author3Img,
+    imageURL: LeslieAlexander,
     alt: 'Leslie Alexander',
     name: 'Leslie Alexander',
     activity: 'Content Writer @Company',

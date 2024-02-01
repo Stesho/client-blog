@@ -24,7 +24,7 @@ export const AuthorProfile = ({ author }: AuthorProfileProps) => {
         />
         <div className={styles.authorInfo}>
           <h1 className='heading1'>{t('title', { name: author.name })}</h1>
-          <p className='body1'>{t('text')}</p>
+          <p className={`${styles.text} body1`}>{t('text')}</p>
           <ul className={styles.links}>
             {FOOTER_SOCIAL.map((link) => (
               <li>
