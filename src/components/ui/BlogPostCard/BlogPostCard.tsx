@@ -21,7 +21,9 @@ export const BlogPostCard = ({
 }: BlogPostCardProps) => {
   const Content = (
     <div className={classNames(styles.blogPostCard, className)}>
-      <Image className={styles.image} src={image} alt={title} />
+      <div className={styles.imageWrapper}>
+        <Image className={styles.image} src={image} alt={title} />
+      </div>
       <div className={styles.content}>
         <span className={styles.type}>{type}</span>
         <h3 className={`${styles.title} heading2`}>{title}</h3>
