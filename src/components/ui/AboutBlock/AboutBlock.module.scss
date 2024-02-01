@@ -1,3 +1,5 @@
+@import '@/styles/colors.scss';
+
 .section {
   display: flex;
   justify-content: space-between;
@@ -21,10 +23,58 @@
   }
 }
 
+.rectangleDecoration {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 103px;
+    height: 116px;
+    top: 114px;
+    left: 0;
+    border-top-left-radius: 40%;
+    transform: translateX(-50%);
+    background-color: $yellow-100;
+  }
+
+  @media (max-width: 768px) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.circleDecoration {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 74px;
+    height: 74px;
+    top: 100%;
+    left: 107px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: $purple;
+  }
+
+  @media (max-width: 768px) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
 .image {
   width: 624px;
   height: 480px;
   object-fit: cover;
+
+  @media (max-width: 425px) {
+    height: 200px;
+  }
 }
 
 .reversed {

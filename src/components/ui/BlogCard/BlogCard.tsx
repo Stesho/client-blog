@@ -21,7 +21,9 @@ export const BlogCard = ({
   text,
 }: BlogCardProps) => (
   <div className={styles.card}>
-    <Image className={styles.image} src={imageURL} alt={alt} />
+    <div className={styles.imageWrapper}>
+      <Image className={styles.image} src={imageURL} alt={alt} />
+    </div>
     <div>
       <div className={`${styles.caption} label`}>
         By <span className={styles.author}>{author}</span> | <span>{date}</span>

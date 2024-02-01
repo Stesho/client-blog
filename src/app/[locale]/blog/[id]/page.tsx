@@ -1,7 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
+import { BlogPostContent } from '@/components/ui/BlogPostContent/BlogPostContent';
 import { BlogPostHead } from '@/components/ui/BlogPostHead/BlogPostHead';
 import { Join } from '@/components/ui/Join/Join';
 import { WhatToRead } from '@/components/ui/WhatToRead/WhatToRead';
@@ -11,8 +11,6 @@ import { redirect } from '@/navigation';
 import { PageParams } from '@/types/pageParams';
 import { getPostById } from '@/utils/getPostById';
 import { getRecommendedPosts } from '@/utils/getRecommendedPosts';
-
-import styles from './page.module.scss';
 
 export function generateStaticParams() {
   return POSTS.map((post) => ({
@@ -36,17 +34,12 @@ export default function BlogPost({
   return (
     <main>
       <BlogPostHead
-        authorName={post.author.name}
+        author={post.author}
         postedDate={post.date}
         title={post.title}
         type={post.type}
       />
-      <Image
-        className={`${styles.image} container`}
-        src={post.image}
-        alt='photo of woman'
-      />
-      <p className={`${styles.text} section container body1`}>{post.text}</p>
+      <BlogPostContent post={post} />
       <WhatToRead posts={recommendedPosts} />
       <Join />
     </main>

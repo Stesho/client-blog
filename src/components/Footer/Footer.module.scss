@@ -1,6 +1,15 @@
 @import '@/styles/colors.scss';
 @import '@/styles/global.scss';
 
+@keyframes slideRight {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 .footer {
   padding: 52px 0;
   background-color: $black;
@@ -36,10 +45,22 @@
 }
 
 .link {
+  position: relative;
   margin: 0 0 0 24px;
 
   &:first-child {
     margin: 0;
+  }
+
+  &:hover::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    top: calc(100% + 2px);
+    left: 0;
+    background-color: $yellow-100;
+    animation: slideRight 300ms linear;
   }
 
   @media (max-width: 425px) {
@@ -105,5 +126,16 @@
 }
 
 .active {
+  position: relative;
   color: $yellow-100;
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    top: calc(100% + 2px);
+    left: 0;
+    background-color: $yellow-100;
+  }
 }
