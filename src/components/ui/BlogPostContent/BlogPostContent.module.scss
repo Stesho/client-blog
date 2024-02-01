@@ -1,0 +1,20 @@
+.image {
+  max-height: 582px;
+  margin: 0 auto 64px auto;
+  object-fit: cover;
+
+  @media (max-width: 425px) {
+    height: 300px;
+  }
+
+  @media (max-width: 883px) {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+.text {
+  max-width: 843px;
+  margin: 0 auto;
+  white-space: pre-line;
+}

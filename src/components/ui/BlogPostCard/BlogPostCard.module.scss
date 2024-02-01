@@ -3,25 +3,43 @@
 .blogPostCard {
   display: flex;
   align-items: center;
+  transition: all 200ms linear;
+
+  &:hover .title {
+    color: $purple;
+  }
+  &:hover .image {
+    scale: 1.1;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
   }
 }
 
-.image {
-  width: 490px;
+.imageWrapper {
+  max-width: 490px;
   height: 318px;
   margin: 0 32px 0 0;
-  object-fit: cover;
+  overflow: hidden;
+  flex: 1;
 
   @media (max-width: 768px) {
+    max-width: 100%;
     width: 100%;
-    margin: 20px 0 0 0;
+    margin: 5px 0 0 0;
   }
 }
 
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 2000ms ease;
+}
+
 .content {
+  flex: 1;
   max-width: 624px;
 }
 
@@ -37,8 +55,16 @@
 
 .title {
   margin: 20px 0 16px 0;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 }
 
 .text {
   color: $grey-400;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
