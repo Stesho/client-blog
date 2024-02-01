@@ -29,6 +29,12 @@ export const AboutBlock = ({
       <h4 className={`${styles.subtitle} heading4`}>{messages.subtitle}</h4>
       <p className='body1'>{messages.text}</p>
     </div>
-    <Image className={styles.image} src={image} alt='ground group growth' />
+    <div
+      className={
+        isReversed ? styles.circleDecoration : styles.rectangleDecoration
+      }
+    >
+      <Image className={styles.image} src={image} alt='ground group growth' />
+    </div>
   </section>
 );
