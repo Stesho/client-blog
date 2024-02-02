@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import { NavBar } from '@/components/Header/NavBar/NavBar';
 import { VideoModal } from '@/components/VideoModal/VideoModal';
+import { usePreventScroll } from '@/hooks/usePreventScroll';
 import { useWindowSize } from '@/hooks/useWindowSize';
 
 import styles from './Header.module.scss';
@@ -20,6 +21,8 @@ export const Header = ({ messages }: HeaderProps) => {
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [isBurgerOpened, setIsBurgerOpened] = useState(false);
   const [windowSize] = useWindowSize();
+
+  usePreventScroll(isBurgerOpened);
 
   const openModal = () => setIsModalOpened(true);
   const closeModal = () => setIsModalOpened(false);
@@ -41,7 +44,11 @@ export const Header = ({ messages }: HeaderProps) => {
           <div className={styles.burgerLine} />
         </button>
         {windowSize[0] <= maxWindowSizePx ? (
-          isBurgerOpened && <NavBar messages={messages} openModal={openModal} />
+          isBurgerOpened && (
+            <div className={styles.overlay}>
+              <NavBar messages={messages} openModal={openModal} />
+            </div>
+          )
         ) : (
           <NavBar messages={messages} openModal={openModal} />
         )}
