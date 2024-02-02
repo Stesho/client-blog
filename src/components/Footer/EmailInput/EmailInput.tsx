@@ -1,10 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+import { Notification } from '@/components/Notification/Notification';
 import { Button } from '@/components/ui/Button/Button';
 import { Input } from '@/components/ui/Input/Input';
 import {
@@ -25,14 +26,17 @@ interface EmailInputProps {
 }
 
 export const EmailInput = ({ messages }: EmailInputProps) => {
+  const [isNotification, setIsNotification] = useState(false);
   const {
     register,
     handleSubmit,
-    setValue,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(emailFormSchema),
   });
+
+  const onCloseNotification = useCallback(() => setIsNotification(false), []);
 
   const sendEmail = (data: EmailFormData) => {
     const { email } = data;
@@ -60,7 +64,8 @@ export const EmailInput = ({ messages }: EmailInputProps) => {
         },
       );
 
-    setValue('email', '');
+    setIsNotification(true);
+    reset();
   };
 
   return (
@@ -82,6 +87,9 @@ export const EmailInput = ({ messages }: EmailInputProps) => {
       >
         {messages.button}
       </Button>
+      {isNotification && (
+        <Notification text='message sent' onClose={onCloseNotification} />
+      )}
     </form>
   );
 };

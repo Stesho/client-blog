@@ -69,6 +69,12 @@
     padding: 10px 0;
     text-align: left;
   }
+
+  @media (max-width: 768px) {
+    &:hover::before {
+      display: none;
+    }
+  }
 }
 
 .content {
@@ -137,5 +143,11 @@
     top: calc(100% + 2px);
     left: 0;
     background-color: $yellow-100;
+  }
+
+  @media (max-width: 768px) {
+    &::before {
+      display: none;
+    }
   }
 }
